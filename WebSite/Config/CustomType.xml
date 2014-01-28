@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomType>
+  <type name="新客户" orderIndex="0" />
+  <type name="老客户" orderIndex="1" />
+  <type name="潜在客户" orderIndex="1" />
+</CustomType>

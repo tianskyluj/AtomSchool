@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Rights>
+  <type name="查看" orderIndex="0" />
+  <type name="添加" orderIndex="1" />
+  <type name="删除" orderIndex="2" />
+  <type name="修改" orderIndex="3" />
+  <type name="导入" orderIndex="4" />
+  <type name="导出" orderIndex="5" />
+  <type name="其他" orderIndex="6" />
+</Rights>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="Region" table="T_Region">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="RegionID" index="PK_Region"/>
+			<generator class="assigned" />
+		</id>
+
+		<!--区域名称-->
+		<property name="RegionName" type="string">
+			<column name="RegionName" length="50" not-null="true"/>
+		</property>
+
+    <!--所属地市-->
+    <many-to-one name="City" column="CityID" class="City" not-null="true"
+                  cascade="save-update" foreign-key="FK_Region_City"/>
+
+    <!--所属省份-->
+    <many-to-one name="Province" column="ProvinceID" class="Province" not-null="true"
+                  cascade="save-update" foreign-key="FK_Region_Province"/>
+
+    <!--启用-->
+		<property name="IsEnabled" type="bool">
+			<column name="IsEnabled" not-null="true"/>
+		</property>
+	</class>
+
+</hibernate-mapping>

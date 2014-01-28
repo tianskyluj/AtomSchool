@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="RoleRights" table="T_RoleRights">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="RoleRightsID" index="PK_RoleRights"/>
+			<generator class="assigned" />
+		</id>
+
+    <!--角色-->
+    <many-to-one name="Role" column="RoleID" class="Role" not-null="true"
+                  cascade="save-update" foreign-key="FK_RoleRights_Role"/>
+
+    <!--模块-->
+    <many-to-one name="SystemModel" column="SystemModelID" class="SystemModel" not-null="true"
+                  cascade="save-update" foreign-key="FK_RoleRights_SystemModel"/>
+
+    <!--权限-->
+    <many-to-one name="Rights" column="RightsID" class="Rights" not-null="true"
+                  cascade="save-update" foreign-key="FK_RoleRights_Rights"/>
+    
+  </class>
+
+</hibernate-mapping>

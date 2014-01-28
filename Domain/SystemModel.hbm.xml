@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="SystemModel" table="T_SystemModel">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="SystemModelID" index="PK_SystemModel"/>
+			<generator class="assigned" />
+		</id>
+
+		<!--模块名称-->
+		<property name="Name" type="string">
+			<column name="Name" length="50" not-null="true"/>
+		</property>
+
+    <!--简称-->
+    <property name="ShortName" type="string">
+      <column name="ShortName" length="50" not-null="true"/>
+    </property>
+
+    <!--图标路径-->
+    <property name="Icon" type="string">
+      <column name="Icon" length="100" not-null="false"/>
+    </property>
+
+		<!--路径-->
+		<property name="Url" type="string">
+			<column name="Url" length="50" not-null="false"/>
+		</property>
+
+		<!--上级节点-->
+		<property name="ParentId" type="Guid">
+			<column name="ParentId"  not-null="true"/>
+		</property>
+
+    <!--左兄弟节点-->
+    <property name="SiblingId" type="Guid">
+      <column name="SiblingId"  not-null="true"/>
+    </property>
+
+		<!--排序码-->
+		<property name="OrderIndex" type="int">
+			<column name="OrderIndex"  not-null="false"/>
+		</property>
+		
+		<!--启用-->
+		<property name="IsEnabled" type="bool">
+			<column name="IsEnabled" not-null="true"/>
+		</property>
+	</class>
+
+</hibernate-mapping>

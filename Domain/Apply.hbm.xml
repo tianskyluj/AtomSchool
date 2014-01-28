@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="Apply" table="T_Apply">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="ApplyID" index="PK_Apply"/>
+			<generator class="assigned" />
+		</id>
+
+    <!--申请人-->
+    <many-to-one name="SendUser" column="SendUserID" class="UserInfo" not-null="true"
+                  cascade="save-update" foreign-key="FK_Apply_SendUser"/>
+
+    <!--申请标题-->
+    <property name="Title" type="string">
+      <column name="Title" length="50" not-null="false"/>
+    </property>
+
+    <!--申请正文-->
+    <property name="Content" type="string">
+      <column name="Content" length="5000" not-null="false"/>
+    </property>
+
+    <!--审核状态-->
+    <property name="CheckState" type="int">
+      <column name="CheckState" length="100" not-null="false"/>
+    </property>
+
+    <!--审核状态 名称-->
+    <property name="CheckStateName" type="string">
+      <column name="CheckStateName" length="50" not-null="false"/>
+    </property>
+
+    <!--审核步骤顺序-->
+    <property name="CheckStep" type="int">
+      <column name="CheckStep" length="100" not-null="false"/>
+    </property>
+
+    <!--附件-->
+    <property name="Attachment" type="string">
+      <column name="Attachment" length="50" not-null="false"/>
+    </property>
+
+    <!--申请类型-->
+    <many-to-one name="ApplyType" column="ApplyTypeID" class="ApplyType" not-null="true"
+                  cascade="save-update" foreign-key="FK_Apply_ApplyType"/>
+
+    <!--创建时间-->
+    <property name="CreateTime" type="DateTime">
+      <column name="CreateTime" not-null="true"/>
+    </property>
+
+  </class>
+
+</hibernate-mapping>

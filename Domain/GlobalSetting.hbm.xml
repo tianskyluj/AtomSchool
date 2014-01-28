@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+  <class name="GlobalSetting" table="T_GlobalSetting">
+    <cache usage="read-write"/>
+    <id name="ID" type="Guid">
+      <column name="GlobalSettingID" index="PK_GlobalSettingInfo"/>
+      <generator class="assigned" />
+    </id>
+
+    <!--名称-->
+    <property name="CompanyName" type="string">
+      <column name="CompanyName" length="50" not-null="true"/>
+    </property>
+
+    <!--是否开启省份权限控制-->
+    <property name="IsProvince" type="bool">
+      <column name="IsProvince" not-null="true"/>
+    </property>
+
+    <!--是否开启地市权限控制-->
+    <property name="IsCity" type="bool">
+      <column name="IsCity" not-null="true"/>
+    </property>
+
+    <!--是否开启区域权限控制-->
+    <property name="IsRegion" type="bool">
+      <column name="IsRegion" not-null="true"/>
+    </property>
+
+    <!--是否开启科室部门权限控制-->
+    <property name="IsDepartment" type="bool">
+      <column name="IsDepartment" not-null="true"/>
+    </property>
+	  
+  </class>
+
+</hibernate-mapping>

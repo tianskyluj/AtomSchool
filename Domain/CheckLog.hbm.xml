@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="CheckLog" table="T_CheckLog">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="CheckLogID" index="PK_CheckLog"/>
+			<generator class="assigned" />
+		</id>
+
+    <!--待审申请单-->
+    <many-to-one name="Apply" column="ApplyID" class="Apply" not-null="true"
+                  cascade="save-update" foreign-key="FK_CheckLog_Apply"/>
+
+    <!--待审角色-->
+    <many-to-one name="Role" column="RoleID" class="Role" not-null="true"
+                  cascade="save-update" foreign-key="FK_CheckLog_Role"/>
+
+    <!--待审用户-->
+    <many-to-one name="UserInfo" column="UserInfoID" class="UserInfo" not-null="true"
+                  cascade="save-update" foreign-key="FK_CheckLog_UserInfo"/>
+
+    <!--审核状态 0 未审核;1 通过审核; -1 未通过审核-->
+    <property name="CheckState" type="int">
+      <column name="CheckState" length="50" not-null="true"/>
+    </property>
+
+    <!--审核步骤顺序-->
+    <property name="CheckStep" type="int">
+      <column name="CheckStep" length="100" not-null="false"/>
+    </property>
+
+    <!--是否已经提交-->
+    <property name="IsRecommit" type="bool">
+      <column name="IsRecommit"  not-null="false"/>
+    </property>
+
+    <!--审核备注-->
+    <property name="Remark" type="string">
+      <column name="Remark" length="5000" not-null="false"/>
+    </property>
+
+    <!--审核时间-->
+    <property name="CheckTime" type="DateTime">
+      <column name="CheckTime" not-null="true"/>
+    </property>
+
+    <!--创建时间-->
+    <property name="CreateTime" type="DateTime">
+      <column name="CreateTime" not-null="true"/>
+    </property>
+
+  </class>
+
+</hibernate-mapping>

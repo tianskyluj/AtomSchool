@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="RoleRegion" table="T_RoleRegion">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="RoleRegionID" index="PK_RoleRegion"/>
+			<generator class="assigned" />
+		</id>
+
+    <!--所属角色-->
+    <many-to-one name="Role" column="RoleID" class="Role" not-null="true"
+                  cascade="save-update" foreign-key="FK_RoleRegion_Role"/>
+
+    <!--所属地市-->
+    <many-to-one name="Region" column="RegionID" class="Region" not-null="true"
+                  cascade="save-update" foreign-key="FK_RoleRegion_Region"/>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+  <class name="Forum" table="T_Forum">
+    <cache usage="read-write"/>
+    <id name="ID" type="Guid">
+      <column name="ForumID" index="PK_Forum"/>
+      <generator class="assigned" />
+    </id>
+
+
+    <!--排序顺序-->
+    <property name="OrderNo" type="int">
+      <column name="OrderNo" not-null="true"/>
+    </property>
+
+    <!--中文名-->
+    <property name="Name" type="string">
+      <column name="Name" length="50" not-null="true"/>
+    </property>
+
+    <!--英文名-->
+    <property name="NameEn" type="string">
+      <column name="NameEn" length="50" not-null="true"/>
+    </property>
+
+    
+    <!--启用-->
+    <property name="IsEnabled" type="bool">
+      <column name="IsEnabled" not-null="true"/>
+    </property>
+
+    <!--分类-->
+    <bag name="CategoryList" generic="true" inverse="true" cascade="all-delete-orphan" table="T_Category">
+      <key column="ForumID" foreign-key="FK_Category_Forum"/>
+      <one-to-many class="Category"/>
+    </bag>
+    
+  </class>
+
+</hibernate-mapping>

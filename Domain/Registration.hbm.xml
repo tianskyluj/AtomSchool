@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="Registration" table="T_Registration">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="RegistrationID" index="PK_Registration"/>
+			<generator class="assigned" />
+		</id>
+
+		<!--用户Id-->
+		<property name="UserId" type="Guid">
+			<column name="UserId" length="500" not-null="true"/>
+		</property>
+
+		<!--名称-->
+		<property name="UserName" type="string">
+			<column name="UserName" length="50" not-null="true"/>
+		</property>
+
+		<!--签到开始时间-->
+		<property name="RegistrationStartTime" type="DateTime">
+			<column name="RegistrationStartTime"  not-null="true"/>
+		</property>
+
+		<!--签到结束时间-->
+		<property name="RegistrationEndTime" type="DateTime">
+			<column name="RegistrationEndTime"  not-null="true"/>
+		</property>
+
+		<!--当天工作时间(小时)-->
+		<property name="WorkTimeSpan" type="Double">
+			<column name="WorkTimeSpan"  not-null="true"/>
+		</property>
+
+		<!--签到备注-->
+		<property name="Remark" type="string">
+			<column name="Remark" length="500" not-null="false"/>
+		</property>
+
+	</class>
+
+</hibernate-mapping>

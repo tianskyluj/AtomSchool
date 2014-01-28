@@ -1,0 +1,15 @@
+F:\项目\Atom\WeCompanySite\Domain\bin\Debug\Domain.dll
+F:\项目\Atom\WeCompanySite\Domain\bin\Debug\Domain.pdb
+F:\项目\Atom\WeCompanySite\Domain\obj\Debug\ResolveAssemblyReference.cache
+F:\项目\Atom\WeCompanySite\Domain\obj\Debug\Domain.dll
+F:\项目\Atom\WeCompanySite\Domain\obj\Debug\Domain.pdb
+D:\我的文档\GitHub\AtomMVC\Domain\bin\Debug\Domain.dll
+D:\我的文档\GitHub\AtomMVC\Domain\bin\Debug\Domain.pdb
+D:\我的文档\GitHub\AtomMVC\Domain\obj\Debug\ResolveAssemblyReference.cache
+D:\我的文档\GitHub\AtomMVC\Domain\obj\Debug\Domain.dll
+D:\我的文档\GitHub\AtomMVC\Domain\obj\Debug\Domain.pdb
+C:\Users\Administrator\Documents\GitHub\AtomMVC\Domain\bin\Debug\Domain.dll
+C:\Users\Administrator\Documents\GitHub\AtomMVC\Domain\bin\Debug\Domain.pdb
+C:\Users\Administrator\Documents\GitHub\AtomMVC\Domain\obj\Debug\Domain.dll
+C:\Users\Administrator\Documents\GitHub\AtomMVC\Domain\obj\Debug\Domain.pdb
+C:\Users\Administrator\Documents\GitHub\AtomMVC\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache

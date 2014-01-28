@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MaintainType>
+  <type name="促使成交" orderIndex="0" />
+  <type name="催款" orderIndex="1" />
+  <type name="其他" orderIndex="2" />
+</MaintainType>

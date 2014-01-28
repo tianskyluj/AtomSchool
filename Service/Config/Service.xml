@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+	<object id="Manager.UserInfo" parent="BaseTransactionManager">
+		<property name="Target">
+			<object type="Service.Implement.UserInfoManager, Service">
+				<property name="CurrentRepository" ref="Repository.UserInfo"/>
+			</object>
+		</property>
+	</object>
+
+	<object id="Manager.Forum" parent="BaseTransactionManager">
+		<property name="Target">
+			<object type="Service.Implement.ForumManager, Service">
+				<property name="CurrentRepository" ref="Repository.Forum"/>
+			</object>
+		</property>
+	</object>
+
+	<object id="Manager.Category" parent="BaseTransactionManager">
+		<property name="Target">
+			<object type="Service.Implement.CategoryManager, Service">
+				<property name="CurrentRepository" ref="Repository.Category"/>
+			</object>
+		</property>
+	</object>
+
+	<object id="Manager.Article" parent="BaseTransactionManager">
+		<property name="Target">
+			<object type="Service.Implement.ArticleManager, Service">
+				<property name="CurrentRepository" ref="Repository.Article"/>
+			</object>
+		</property>
+	</object>
+
+	<object id="Manager.GlobalSetting" parent="BaseTransactionManager">
+		<property name="Target">
+			<object type="Service.Implement.GlobalSettingManager, Service">
+				<property name="CurrentRepository" ref="Repository.GlobalSetting"/>
+			</object>
+		</property>
+	</object>
+
+	<object id="Manager.SystemModel" parent="BaseTransactionManager">
+		<property name="Target">
+			<object type="Service.Implement.SystemModelManager, Service">
+				<property name="CurrentRepository" ref="Repository.SystemModel"/>
+			</object>
+		</property>
+	</object>
+
+	<object id="Manager.Registration" parent="BaseTransactionManager">
+		<property name="Target">
+			<object type="Service.Implement.RegistrationManager, Service">
+				<property name="CurrentRepository" ref="Repository.Registration"/>
+			</object>
+		</property>
+	</object>
+
+  <object id="Manager.Province" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.ProvinceManager, Service">
+        <property name="CurrentRepository" ref="Repository.Province"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.City" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.CityManager, Service">
+        <property name="CurrentRepository" ref="Repository.City"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Region" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.RegionManager, Service">
+        <property name="CurrentRepository" ref="Repository.Region"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Department" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.DepartmentManager, Service">
+        <property name="CurrentRepository" ref="Repository.Department"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Role" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.RoleManager, Service">
+        <property name="CurrentRepository" ref="Repository.Role"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.RoleProvince" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.RoleProvinceManager, Service">
+        <property name="CurrentRepository" ref="Repository.RoleProvince"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.RoleCity" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.RoleCityManager, Service">
+        <property name="CurrentRepository" ref="Repository.RoleCity"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.RoleRegion" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.RoleRegionManager, Service">
+        <property name="CurrentRepository" ref="Repository.RoleRegion"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.RoleDepartment" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.RoleDepartmentManager, Service">
+        <property name="CurrentRepository" ref="Repository.RoleDepartment"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.RoleUser" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.RoleUserManager, Service">
+        <property name="CurrentRepository" ref="Repository.RoleUser"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Email" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.EmailManager, Service">
+        <property name="CurrentRepository" ref="Repository.Email"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.EmailReceiveUserRelation" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.EmailReceiveUserRelationManager, Service">
+        <property name="CurrentRepository" ref="Repository.EmailReceiveUserRelation"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Task" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.TaskManager, Service">
+        <property name="CurrentRepository" ref="Repository.Task"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.TaskState" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.TaskStateManager, Service">
+        <property name="CurrentRepository" ref="Repository.TaskState"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.TaskLevel" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.TaskLevelManager, Service">
+        <property name="CurrentRepository" ref="Repository.TaskLevel"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.TaskReceiveUserRelation" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.TaskReceiveUserRelationManager, Service">
+        <property name="CurrentRepository" ref="Repository.TaskReceiveUserRelation"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.ApplyType" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.ApplyTypeManager, Service">
+        <property name="CurrentRepository" ref="Repository.ApplyType"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Flow" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.FlowManager, Service">
+        <property name="CurrentRepository" ref="Repository.Flow"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Apply" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.ApplyManager, Service">
+        <property name="CurrentRepository" ref="Repository.Apply"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.CheckLog" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.CheckLogManager, Service">
+        <property name="CurrentRepository" ref="Repository.CheckLog"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.DocPass" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.DocPassManager, Service">
+        <property name="CurrentRepository" ref="Repository.DocPass"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.DocReceiveUserRelation" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.DocReceiveUserRelationManager, Service">
+        <property name="CurrentRepository" ref="Repository.DocReceiveUserRelation"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Custom" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.CustomManager, Service">
+        <property name="CurrentRepository" ref="Repository.Custom"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.CustomType" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.CustomTypeManager, Service">
+        <property name="CurrentRepository" ref="Repository.CustomType"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.CustomMaintain" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.CustomMaintainManager, Service">
+        <property name="CurrentRepository" ref="Repository.CustomMaintain"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.MaintainType" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.MaintainTypeManager, Service">
+        <property name="CurrentRepository" ref="Repository.MaintainType"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.MaintainMethod" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.MaintainMethodManager, Service">
+        <property name="CurrentRepository" ref="Repository.MaintainMethod"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Notice" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.NoticeManager, Service">
+        <property name="CurrentRepository" ref="Repository.Notice"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.UploadFile" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.UploadFileManager, Service">
+        <property name="CurrentRepository" ref="Repository.UploadFile"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Rights" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.RightsManager, Service">
+        <property name="CurrentRepository" ref="Repository.Rights"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.RoleRights" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.RoleRightsManager, Service">
+        <property name="CurrentRepository" ref="Repository.RoleRights"/>
+      </object>
+    </property>
+  </object>
+
+</objects>
+

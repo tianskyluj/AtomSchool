@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="UserInfo" table="T_UserInfo">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="UserInfoID" index="PK_UserInfo"/>
+			<generator class="assigned" />
+		</id>
+
+		<!--名称-->
+		<property name="Name" type="string">
+			<column name="Name" length="50" not-null="true"/>
+		</property>
+
+		<!--账号-->
+		<property name="Account" type="string">
+			<column name="Account" length="50" not-null="true"/>
+		</property>
+
+		<!--密码-->
+		<property name="Password" type="string">
+			<column name="Password" length="32" not-null="true"/>
+		</property>
+
+		<!--联系电话-->
+		<property name="Phone" type="string">
+			<column name="Phone" length="500" not-null="false"/>
+		</property>
+
+		<!--邮件-->
+		<property name="Email" type="string">
+			<column name="Email" length="500" not-null="false"/>
+		</property>
+
+		<!--QQ messager-->
+		<property name="QQ" type="string">
+			<column name="QQ" length="500" not-null="false"/>
+		</property>
+
+		<!--头像地址-->
+		<property name="Avatar" type="string">
+			<column name="Avatar" length="500" not-null="false"/>
+		</property>
+
+		<!--是否管理员-->
+		<property name="IsAdmin" type="bool">
+			<column name="IsAdmin" not-null="true"/>
+		</property>
+
+		<!--启用-->
+		<property name="IsEnabled" type="bool">
+			<column name="IsEnabled" not-null="true"/>
+		</property>
+
+		<!--备注-->
+		<property name="Remark" type="string">
+			<column name="Remark" length="500" not-null="false"/>
+		</property>
+
+		<!--创建人-->
+		<property name="createUser" type="int">
+			<column name="createUser" length="500" not-null="false"/>
+		</property>
+
+		<!--创建时间-->
+		<property name="CreateTime" type="DateTime">
+			<column name="CreateTime"  not-null="true"/>
+		</property>
+
+		<!--更新人-->
+		<property name="UpdateUser" type="int">
+			<column name="UpdateUser" length="500" not-null="false"/>
+		</property>
+
+		<!--更新时间-->
+		<property name="UpdateTime" type="DateTime">
+			<column name="UpdateTime"  not-null="true"/>
+		</property>
+
+	</class>
+
+</hibernate-mapping>

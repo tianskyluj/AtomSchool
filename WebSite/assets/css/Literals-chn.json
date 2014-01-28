@@ -1,0 +1,10 @@
+﻿{
+    Contacts: '联系人',
+    Minimize: '最小',
+	Maximize: '还原',
+	Close: '关闭',
+	NoUsersOnline: '无人在线',
+	Online: '在线',
+	Offline: '离线',
+	IsTyping: '正在输入...'
+}

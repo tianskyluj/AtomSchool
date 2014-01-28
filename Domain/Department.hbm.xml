@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="Department" table="T_Department">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="DepartmentID" index="PK_Department"/>
+			<generator class="assigned" />
+		</id>
+
+		<!--部门名称-->
+		<property name="DepartmentName" type="string">
+			<column name="DepartmentName" length="50" not-null="true"/>
+		</property>
+
+    <!--启用-->
+		<property name="IsEnabled" type="bool">
+			<column name="IsEnabled" not-null="true"/>
+		</property>
+	</class>
+
+</hibernate-mapping>

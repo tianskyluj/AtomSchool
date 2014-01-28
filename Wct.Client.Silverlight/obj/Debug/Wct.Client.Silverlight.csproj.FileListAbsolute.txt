@@ -1,0 +1,14 @@
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\Bin\Debug\Wct.Client.Silverlight.dll
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\Bin\Debug\Wct.Client.Silverlight.pdb
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\Bin\Debug\AppManifest.xaml
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\Bin\Debug\Wct.Client.Silverlight.xap
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\Bin\Debug\Wct.Client.SilverlightTestPage.html
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\Bin\Debug\Microsoft.Expression.Interactions.dll
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\Bin\Debug\System.Windows.Interactivity.dll
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\obj\Debug\ResolveAssemblyReference.cache
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\obj\Debug\App.g.i.cs
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\obj\Debug\MainPage.g.i.cs
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\obj\Debug\Wct.Client.Silverlight.g.resources
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\obj\Debug\Wct.Client.Silverlight.dll
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\obj\Debug\Wct.Client.Silverlight.pdb
+D:\work\Company Web Site\Source\WeCompanySite\Wct.Client.Silverlight\obj\Debug\XapCacheFile.xml

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="CustomMaintain" table="T_CustomMaintain">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="CustomMaintainID" index="PK_CustomMaintain"/>
+			<generator class="assigned" />
+		</id>
+
+    <!--客户类型-->
+    <many-to-one name="Custom" column="CustomID" class="Custom" not-null="true"
+                  cascade="save-update" foreign-key="FK_CustomMaintain_Custom"/>
+
+    <!--维系目标:销售，回款,普通维系-->
+    <many-to-one name="MaintainType" column="MaintainTypeID" class="MaintainType" not-null="true"
+                  cascade="save-update" foreign-key="FK_CustomMaintain_MaintainType"/>
+
+    <!--维系方法:电话维系，当面维系-->
+    <many-to-one name="MaintainMethod" column="MaintainMethodID" class="MaintainMethod" not-null="true"
+                  cascade="save-update" foreign-key="FK_CustomMaintain_MaintainMethod"/>
+
+    <!--维系人-->
+    <many-to-one name="MaintainUser" column="MaintainUserID" class="UserInfo" not-null="true"
+                  cascade="save-update" foreign-key="FK_CustomMaintain_MaintainUser"/>
+
+    <!--维系时间-->
+    <property name="MaintainTime" type="DateTime">
+      <column name="MaintainTime" not-null="true"/>
+    </property>
+
+    <!--维系结果-->
+    <property name="Result" type="string">
+      <column name="Result" length="5000" not-null="true"/>
+    </property>
+
+    <!--创建人-->
+    <many-to-one name="CreateUser" column="CreateUserID" class="UserInfo" not-null="true"
+                  cascade="save-update" foreign-key="FK_CustomMaintain_CreateUser"/>
+
+    <!--创建时间-->
+    <property name="CreateTime" type="DateTime">
+      <column name="CreateTime" not-null="true"/>
+    </property>
+
+  </class>
+
+</hibernate-mapping>

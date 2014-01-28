@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+	<object type="WebSite.Controllers.HomeController, WebSite" singleton="false" >
+		<property name="UserInfoManager" ref="Manager.UserInfo"/>
+		<property name="CategoryManager" ref="Manager.Category"/>
+		<property name="ForumManager" ref="Manager.Forum"/>
+		<property name="GlobalSettingManager" ref="Manager.GlobalSetting"/>
+		<property name="RegistrationManager" ref="Manager.Registration"/>
+    <property name="SystemModelManager" ref="Manager.SystemModel"/>
+    <property name="EmailReceiveUserRelationManager" ref="Manager.EmailReceiveUserRelation"/>
+    <property name="TaskReceiveUserRelationManager" ref="Manager.TaskReceiveUserRelation"/>
+    <property name="NoticeManager" ref="Manager.Notice"/>
+    <property name="DocReceiveUserRelationManager" ref="Manager.DocReceiveUserRelation"/>
+    <property name="CheckLogManager" ref="Manager.CheckLog"/>
+	</object>
+
+	<object type="WebSite.Controllers.UserInfoController, WebSite" singleton="false" >
+		<property name="UserInfoManager" ref="Manager.UserInfo"/>
+	</object>
+
+	<object type="WebSite.Controllers.SystemController, WebSite" singleton="false" >
+		<property name="GlobalSettingManager" ref="Manager.GlobalSetting"/>
+		<property name="SystemModelManager" ref="Manager.SystemModel"/>
+    <property name="ProvinceManager" ref="Manager.Province"/>
+    <property name="CityManager" ref="Manager.City"/>
+    <property name="RegionManager" ref="Manager.Region"/>
+    <property name="DepartmentManager" ref="Manager.Department"/>
+    <property name="RoleManager" ref="Manager.Role"/>
+    <property name="UserInfoManager" ref="Manager.UserInfo"/>
+    <property name="RightsManager" ref="Manager.Rights"/>
+    <property name="RoleRightsManager" ref="Manager.RoleRights"/>
+	</object>
+
+	<object type="WebSite.Controllers.SystemModelController, WebSite" singleton="false" >
+		<property name="SystemModelManager" ref="Manager.SystemModel"/>
+	</object>
+
+	<object type="WebSite.Controllers.AccountController, WebSite" singleton="false" >
+		<property name="UserInfoManager" ref="Manager.UserInfo"/>
+    <property name="RoleManager" ref="Manager.Role"/>
+    <property name="RoleUserManager" ref="Manager.RoleUser"/>
+	</object>
+
+	<object type="WebSite.Controllers.ForumController, WebSite" singleton="false" >
+		<property name="ForumManager" ref="Manager.Forum"/>
+	</object>
+
+	<object type="WebSite.Controllers.CategoryController, WebSite" singleton="false" >
+		<property name="CategoryManager" ref="Manager.Category"/>
+		<property name="ForumManager" ref="Manager.Forum"/>
+		<property name="ArticleManager" ref="Manager.Article"/>
+	</object>
+
+	<object type="WebSite.Controllers.ArticleController, WebSite" singleton="false" >
+		<property name="ArticleManager" ref="Manager.Article"/>
+		<property name="CategoryManager" ref="Manager.Category"/>
+		<property name="ForumManager" ref="Manager.Forum"/>
+	</object>
+
+  <object type="WebSite.Controllers.ProvinceController, WebSite" singleton="false" >
+    <property name="ProvinceManager" ref="Manager.Province"/>
+  </object>
+
+  <object type="WebSite.Controllers.CityController, WebSite" singleton="false" >
+    <property name="CityManager" ref="Manager.City"/>
+    <property name="ProvinceManager" ref="Manager.Province"/>
+  </object>
+
+  <object type="WebSite.Controllers.RegionController, WebSite" singleton="false" >
+    <property name="RegionManager" ref="Manager.Region"/>
+    <property name="CityManager" ref="Manager.City"/>
+    <property name="ProvinceManager" ref="Manager.Province"/>
+  </object>
+
+  <object type="WebSite.Controllers.DepartmentController, WebSite" singleton="false" >
+    <property name="DepartmentManager" ref="Manager.Department"/>
+  </object>
+
+  <object type="WebSite.Controllers.RoleController, WebSite" singleton="false" >
+    <property name="RoleManager" ref="Manager.Role"/>
+    <property name="DepartmentManager" ref="Manager.Department"/>
+  </object>
+
+  <object type="WebSite.Controllers.EmailController, WebSite" singleton="false" >
+    <property name="EmailManager" ref="Manager.Email"/>
+    <property name="UserInfoManager" ref="Manager.UserInfo"/>
+    <property name="EmailReceiveUserRelationManager" ref="Manager.EmailReceiveUserRelation"/>
+    <property name="UploadFileManager" ref="Manager.UploadFile"/>
+  </object>
+
+  <object type="WebSite.Controllers.TaskController, WebSite" singleton="false" >
+    <property name="TaskManager" ref="Manager.Task"/>
+    <property name="TaskStateManager" ref="Manager.TaskState"/>
+    <property name="TaskLevelManager" ref="Manager.TaskLevel"/>
+    <property name="UserInfoManager" ref="Manager.UserInfo"/>
+    <property name="TaskReceiveUserRelationManager" ref="Manager.TaskReceiveUserRelation"/>
+  </object>
+
+  <object type="WebSite.Controllers.ApplyController, WebSite" singleton="false" >
+    <property name="ApplyManager" ref="Manager.Apply"/>
+    <property name="ApplyTypeManager" ref="Manager.ApplyType"/>
+    <property name="RoleManager" ref="Manager.Role"/>
+    <property name="UserInfoManager" ref="Manager.UserInfo"/>
+    <property name="CheckLogManager" ref="Manager.CheckLog"/>
+    <property name="RoleUserManager" ref="Manager.RoleUser"/>
+    <property name="UploadFileManager" ref="Manager.UploadFile"/>
+  </object>
+
+  <object type="WebSite.Controllers.DocPassController, WebSite" singleton="false" >
+    <property name="UserInfoManager" ref="Manager.UserInfo"/>
+    <property name="DocPassManager" ref="Manager.DocPass"/>
+    <property name="DocReceiveUserRelationManager" ref="Manager.DocReceiveUserRelation"/>
+    <property name="UploadFileManager" ref="Manager.UploadFile"/>
+  </object>
+
+  <object type="WebSite.Controllers.CustomController, WebSite" singleton="false" >
+    <property name="CustomManager" ref="Manager.Custom"/>
+    <property name="CustomTypeManager" ref="Manager.CustomType"/>
+    <property name="UserInfoManager" ref="Manager.UserInfo"/>
+    <property name="CustomMaintainManager" ref="Manager.CustomMaintain"/>
+    <property name="MaintainMethodManager" ref="Manager.MaintainMethod"/>
+    <property name="MaintainTypeManager" ref="Manager.MaintainType"/>
+  </object>
+
+  <object type="WebSite.Controllers.UploadFileController, WebSite" singleton="false" >
+    <property name="UploadFileManager" ref="Manager.UploadFile"/>
+    <property name="UserInfoManager" ref="Manager.UserInfo"/>
+    <property name="DocReceiveUserRelationManager" ref="Manager.DocReceiveUserRelation"/>
+  </object>
+
+  <object type="WebSite.Controllers.RightsController, WebSite" singleton="false" >
+    <property name="RightsManager" ref="Manager.Rights"/>
+    <property name="RoleRightsManager" ref="Manager.RoleRights"/>
+    <property name="UserInfoManager" ref="Manager.UserInfo"/>
+    <property name="RoleManager" ref="Manager.Role"/>
+    <property name="SystemModelManager" ref="Manager.SystemModel"/>
+  </object>
+
+	<object type="MvcFckEditor.Controllers.FckEditorController, MvcFckEditor" singleton="false" />
+
+</objects>

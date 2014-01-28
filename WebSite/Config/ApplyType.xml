@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplyType>
+  <type name="请假申请" orderIndex="0" />
+  <type name="报销申请" orderIndex="1" />
+</ApplyType>

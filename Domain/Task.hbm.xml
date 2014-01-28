@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="Task" table="T_Task">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="TaskID" index="PK_Task"/>
+			<generator class="assigned" />
+		</id>
+
+    <!--任务分配人-->
+    <many-to-one name="SendUser" column="SendUserID" class="UserInfo" not-null="true"
+                  cascade="save-update" foreign-key="FK_Task_SendUser"/>
+
+    <!--任务标题-->
+    <property name="Title" type="string">
+      <column name="Title" length="50" not-null="true"/>
+    </property>
+
+    <!--任务正文-->
+    <property name="Content" type="string">
+      <column name="Content" length="5000" not-null="false"/>
+    </property>
+
+    <!--附件-->
+    <property name="Attachment" type="string">
+      <column name="Attachment" length="50" not-null="false"/>
+    </property>
+
+    <!--任务级别-->
+    <many-to-one name="TaskLevel" column="TaskLevelID" class="TaskLevel" not-null="true"
+                  cascade="save-update" foreign-key="FK_Task_TaskLevel"/>
+
+    <!--任务期限-->
+    <property name="Deadline" type="DateTime">
+      <column name="Deadline" not-null="false"/>
+    </property>
+
+    <!--任务分配时间-->
+    <property name="SendTime" type="DateTime">
+      <column name="SendTime" not-null="false"/>
+    </property>
+
+    <!--创建时间-->
+    <property name="CreateTime" type="DateTime">
+      <column name="CreateTime" not-null="true"/>
+    </property>
+
+  </class>
+
+</hibernate-mapping>

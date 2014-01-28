@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC017E1A-8853-4267-932E-30CB3BCF8CF5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dao</RootNamespace>
+    <AssemblyName>Dao</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\lib\NHibernate\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\lib\NHibernate\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.DynamicProxy">
+      <HintPath>..\lib\NHibernate\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\lib\NHibernate\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.LinFu">
+      <HintPath>..\lib\NHibernate\NHibernate.ByteCode.LinFu.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq">
+      <HintPath>..\lib\NHibernate\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\lib\Spring.NET\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\lib\Spring.NET\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate30">
+      <HintPath>..\lib\Spring.NET\Spring.Data.NHibernate30.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IFlowRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implement\FlowRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implement\UserInfoRepository.cs" />
+    <Compile Include="Implement\ForumRepository.cs" />
+    <Compile Include="Implement\ArticleRepository.cs" />
+    <Compile Include="Implement\CategoryRepository.cs" />
+    <Compile Include="Implement\GlobalSettingRepository.cs" />
+    <Compile Include="Implement\SystemModelRepository.cs" />
+    <Compile Include="Implement\RegistrationRepository.cs" />
+    <Compile Include="Implement\ProvinceRepository.cs" />
+    <Compile Include="Implement\CityRepository.cs" />
+    <Compile Include="Implement\RegionRepository.cs" />
+    <Compile Include="Implement\DepartmentRepository.cs" />
+    <Compile Include="Implement\RoleRepository.cs" />
+    <Compile Include="Implement\RoleProvinceRepository.cs" />
+    <Compile Include="Implement\RoleCityRepository.cs" />
+    <Compile Include="Implement\RoleRegionRepository.cs" />
+    <Compile Include="Implement\RoleDepartmentRepository.cs" />
+    <Compile Include="Implement\RoleUserRepository.cs" />
+    <Compile Include="Implement\EmailRepository.cs" />
+    <Compile Include="Implement\EmailReceiveUserRelationRepository.cs" />
+    <Compile Include="Implement\TaskRepository.cs" />
+    <Compile Include="Implement\TaskStateRepository.cs" />
+    <Compile Include="Implement\TaskReceiveUserRelationRepository.cs" />
+    <Compile Include="Implement\TaskLevelRepository.cs" />
+    <Compile Include="Implement\ApplyTypeRepository.cs" />
+    <Compile Include="Implement\ApplyRepository.cs" />
+    <Compile Include="Implement\CheckLogRepository.cs" />
+    <Compile Include="Implement\DocPassRepository.cs" />
+    <Compile Include="Implement\DocReceiveUserRelationRepository.cs" />
+    <Compile Include="Implement\CustomRepository.cs" />
+    <Compile Include="Implement\CustomTypeRepository.cs" />
+    <Compile Include="Implement\CustomMaintainRepository.cs" />
+    <Compile Include="Implement\MaintainTypeRepository.cs" />
+    <Compile Include="Implement\MaintainMethodRepository.cs" />
+    <Compile Include="Implement\NoticeRepository.cs" />
+    <Compile Include="Implement\UploadFileRepository.cs" />
+    <Compile Include="Implement\RightsRepository.cs" />
+    <Compile Include="Implement\RoleRightsRepository.cs" />
+    <Compile Include="IRepository`1.cs" />
+    <Compile Include="IUserInfoRepository.cs" />
+    <Compile Include="RepositoryBase`1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IForumRepository.cs" />
+    <Compile Include="IArticleRepository.cs" />
+    <Compile Include="ICategoryRepository.cs" />
+    <Compile Include="IGlobalSettingRepository.cs" />
+    <Compile Include="ISystemModelRepository.cs" />
+    <Compile Include="IRegistrationRepository.cs" />
+    <Compile Include="IProvinceRepository.cs" />
+    <Compile Include="ICityRepository.cs" />
+    <Compile Include="IRegionRepository.cs" />
+    <Compile Include="IDepartmentRepository.cs" />
+    <Compile Include="IRoleRepository.cs" />
+    <Compile Include="IRoleProvinceRepository.cs" />
+    <Compile Include="IRoleCityRepository.cs" />
+    <Compile Include="IRoleRegionRepository.cs" />
+    <Compile Include="IRoleDepartmentRepository.cs" />
+    <Compile Include="IRoleUserRepository.cs" />
+    <Compile Include="IEmailRepository.cs" />
+    <Compile Include="IEmailReceiveUserRelationRepository.cs" />
+    <Compile Include="ITaskRepository.cs" />
+    <Compile Include="ITaskStateRepository.cs" />
+    <Compile Include="ITaskReceiveUserRelationRepository.cs" />
+    <Compile Include="ITaskLevelRepository.cs" />
+    <Compile Include="IApplyTypeRepository.cs" />
+    <Compile Include="IApplyRepository.cs" />
+    <Compile Include="ICheckLogRepository.cs" />
+    <Compile Include="IDocPassRepository.cs" />
+    <Compile Include="IDocReceiveUserRelationRepository.cs" />
+    <Compile Include="ICustomRepository.cs" />
+    <Compile Include="ICustomTypeRepository.cs" />
+    <Compile Include="ICustomMaintainRepository.cs" />
+    <Compile Include="IMaintainTypeRepository.cs" />
+    <Compile Include="IMaintainMethodRepository.cs" />
+    <Compile Include="INoticeRepository.cs" />
+    <Compile Include="IUploadFileRepository.cs" />
+    <Compile Include="IRightsRepository.cs" />
+    <Compile Include="IRoleRightsRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{B3F29715-E925-4E56-9248-580F06C3BC11}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{A42D287A-8EF4-48F6-B14C-7F9CA834F786}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\Dao.xml" />
+    <EmbeddedResource Include="Config\DaoBase.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

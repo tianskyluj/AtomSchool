@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+  <class name="Category" table="T_Category">
+    <cache usage="read-write"/>
+    <id name="ID" type="Guid">
+      <column name="CategoryID" index="PK_Category"/>
+      <generator class="assigned" />
+    </id>
+
+
+    <!--排序顺序-->
+    <property name="OrderNo" type="int">
+      <column name="OrderNo" not-null="true"/>
+    </property>
+
+    <!--分类类型-->
+    <property name="CategoryType" type="string">
+      <column name="CategoryType" length="50" not-null="true"/>
+    </property>
+
+    <!--中文名-->
+    <property name="Name" type="string">
+      <column name="Name" length="50" not-null="true"/>
+    </property>
+
+    <!--英文名-->
+    <property name="NameEn" type="string">
+      <column name="NameEn" length="50" not-null="true"/>
+    </property>
+
+    <!--中文内容-->
+    <property name="Content" type="string">
+      <column name="Content" length="5000" not-null="false"/>
+    </property>
+
+    <!--英文内容-->
+    <property name="ContentEn" type="string">
+      <column name="ContentEn" length="5000" not-null="false"/>
+    </property>
+
+    <!--中文关键字-->
+    <property name="Keyword" type="string">
+      <column name="Keyword" length="100" not-null="false"/>
+    </property>
+
+    <!--英文关键字-->
+    <property name="KeywordEn" type="string">
+      <column name="KeywordEn" length="100" not-null="false"/>
+    </property>
+
+    <!--中文描述-->
+    <property name="Description" type="string">
+      <column name="Description" length="500" not-null="false"/>
+    </property>
+
+    <!--英文描述-->
+    <property name="DescriptionEn" type="string">
+      <column name="DescriptionEn" length="500" not-null="false"/>
+    </property>
+    
+    <!--启用-->
+    <property name="IsEnabled" type="bool">
+      <column name="IsEnabled" not-null="true"/>
+    </property>
+
+    <!--版块-->
+    <many-to-one name="Forum" column="ForumID" class="Forum" not-null="true"
+                  cascade="save-update" foreign-key="FK_Category_Forum"/>
+    
+    <!--文章-->
+    <bag name="ArticleList" generic="true" inverse="true" cascade="all-delete-orphan" table="T_Article">
+      <key column="CategoryID" foreign-key="FK_Article_Category"/>
+      <one-to-many class="Article"/>
+    </bag>
+    
+  </class>
+
+</hibernate-mapping>

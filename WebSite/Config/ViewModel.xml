@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ViewModel>
+	<Direct value="Email" shortName="Email" name="内部邮件" icon="../../assets/img/icons/stuttgart-icon-pack/32x32/email.png" >
+    <URL value="/Email/NewEmail" shortName="NewEmail" name="写邮件"/>
+		<URL value="/Email/Inbox" shortName="Inbox" name="收件箱"/>
+    <URL value="/Email/Sentbox" shortName="Sentbox" name="已发送"/>
+	</Direct>
+  <Direct value="Task" name="任务管理" shortName="Task"  icon="../../assets/img/icons/stuttgart-icon-pack/32x32/order.png">
+    <URL value="/Task/NewTask" name="分配任务" shortName="NewTask"/>
+    <URL value="/Task/MyTask" name="我的任务" shortName="MyTask"/>
+    <URL value="/Task/AssignedTask" name="我分配的任务" shortName="AssignedTask"/>
+  </Direct>
+  <Direct value="Apply" name="申请审批" shortName="Apply"  icon="../../assets/img/icons/stuttgart-icon-pack/32x32/process.png">
+    <URL value="/Apply/NewApply" name="提交申请" shortName="NewApply"/>
+    <URL value="/Apply/MyApply" name="我的申请" shortName="MyApply"/>
+    <URL value="/Apply/MyCheck" name="我的审批" shortName="MyCheck"/>
+  </Direct>
+  <Direct value="DocPass" name="公文传阅" shortName="DocPass"  icon="../../assets/img/icons/stuttgart-icon-pack/32x32/communication.png">
+    <URL value="/DocPass/NewPass" name="添加公文传阅" shortName="NewPass"/>
+    <URL value="/DocPass/MyDoc" name="我发起的传阅" shortName="MyDoc"/>
+    <URL value="/DocPass/MyPass" name="我的传阅" shortName="MyPass"/>
+  </Direct>
+  <Direct value="Custom" name="客户关系管理"  shortName="Custom" icon="../../assets/img/icons/stuttgart-icon-pack/32x32/customers.png">
+    <URL value="/Custom/NewCustom" name="添加客户" shortName="NewCustom"/>
+    <URL value="/Custom/CustomList" name="客户列表" shortName="CustomList"/>
+    <URL value="/Custom/CustomBirthday" name="生日提醒" shortName="CustomBirthday"/>
+    <URL value="/Custom/NewActive" name="添加客户维护业务" shortName="NewActive"/>
+    <URL value="/Custom/ActiveSummary" name="客户维护业务统计" shortName="ActiveSummary"/>
+    <URL value="/Custom/ActiveWarnning" name="客户维护预警" shortName="ActiveWarnning"/>
+  </Direct>
+  <!--<Direct value="Diagnose" name="采购管理" >
+    <URL value="/Diagnose/Index" name="发布采购"/>
+  </Direct>-->
+  <!--<Direct value="Diagnose" name="库存管理" >
+    <URL value="/Diagnose/Index" name="财务状况"/>
+  </Direct>-->
+  <!--<Direct value="Diagnose" name="销售管理" >
+    <URL value="/Diagnose/Index" name="发布销售"/>
+  </Direct>-->
+	<!--<Direct value="Diagnose" name="企业诊断" >
+		<URL value="/Diagnose/Index" name="财务状况"/>
+		<URL value="/Diagnose/Index" name="员工状况"/>
+		<URL value="/Diagnose/Index" name="销售状况"/>
+		<URL value="/Diagnose/Index" name="客户状况"/>
+	</Direct>
+	<Direct value="Service" name="企业服务" >
+		<URL value="/Service/Index" name="抵押贷款"/>
+		<URL value="/Service/Index" name="融资租赁"/>
+		<URL value="/Service/Index" name="财务服务"/>
+	</Direct>
+  <Direct value="Diagnose" name="通讯录" >
+    <URL value="/Diagnose/Index" name="发布销售"/>
+  </Direct>
+  <Direct value="Diagnose" name="实时聊天" >
+    
+  </Direct>-->
+  
+</ViewModel>

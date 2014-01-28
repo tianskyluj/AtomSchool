@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="Flow" table="T_Flow">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="FLowID" index="PK_FLow"/>
+			<generator class="assigned" />
+		</id>
+
+    <!--类型名称-->
+    <property name="FlowName" type="string">
+      <column name="FlowName" length="50" not-null="true"/>
+    </property>
+
+    <!--添加时间-->
+    <property name="CreateTime" type="DateTime">
+      <column name="CreateTime"  not-null="true"/>
+    </property>
+
+  </class>
+
+</hibernate-mapping>

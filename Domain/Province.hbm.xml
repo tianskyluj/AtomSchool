@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="Province" table="T_Province">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="ProvinceID" index="PK_Province"/>
+			<generator class="assigned" />
+		</id>
+
+		<!--省份名称-->
+		<property name="ProvinceName" type="string">
+			<column name="ProvinceName" length="50" not-null="true"/>
+		</property>
+
+		<!--启用-->
+		<property name="IsEnabled" type="bool">
+			<column name="IsEnabled" not-null="true"/>
+		</property>
+	</class>
+
+</hibernate-mapping>

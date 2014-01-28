@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MaintainMethod>
+  <type name="当面维系" orderIndex="0" />
+  <type name="电话维系" orderIndex="1" />
+  <type name="邮件维系" orderIndex="1" />
+</MaintainMethod>

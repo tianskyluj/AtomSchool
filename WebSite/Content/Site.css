@@ -1,0 +1,433 @@
+﻿/*COnjURE.CN*/
+
+
+/*全局*/
+body
+{
+    margin:0;
+    padding:0;
+    font-size:14px;
+    font-family:Tahoma;
+    background-color: #E3E3E1;
+}
+
+#body
+{
+
+}
+
+a:link
+{
+    color: #0000FF;
+	text-decoration: none;
+}
+a:visited
+{
+    color: #0000FF;
+    text-decoration: none;
+}
+a:hover
+{
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+ul
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+li
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+    line-height:24px;
+    text-decoration:none;
+    word-break:break-all;
+    white-space:normal;
+}
+
+tt
+{
+    font-weight:bold;
+    font-size:16px;
+}
+
+.time
+{
+    font-size: 11px;
+    color: #C0C0C0;
+    float:right;
+    position:relative;
+    top:-26px;
+}
+
+.hr
+{
+    height: 10px;
+    background-color: #2560AA;
+    clear: both;
+    border-bottom:1px soild #999999;
+}
+
+.spacing
+{
+    height: 10px;
+}
+
+.msg
+{
+    margin:10px 0 0 0;
+    padding: 5px;
+    background-color: #FFFFB3;
+    border: 1px solid #FFFF99;
+    font-size:12px;
+}
+
+.allTxt
+{
+    border:1px solid #999999;
+    font-size:14px;
+    padding:2px;
+}
+
+.allBtn
+{
+    border-left: 1px solid #66acff;
+    border-right: 1px solid #094fa1;
+    border-top: 1px solid #66acff;
+    border-bottom: 1px solid #094fa1;
+    padding: 0 1.0em;
+    background: #2680e9;
+    color:#fff;
+    letter-spacing:0.3em; 
+    cursor:pointer;
+    height: 24px;
+}
+
+.btnDel
+{
+    border-left: 1px solid #66acff;
+    border-right: 1px solid #094fa1;
+    border-top: 1px solid #66acff;
+    border-bottom: 1px solid #094fa1;
+    padding: 0 1.0em;
+    background: #FF5050;
+    color: #fff;
+    letter-spacing: 0.3em;
+    cursor: pointer;
+    border-color: #CC0066 #990033 #990033 #CC0066;
+}
+
+.avatar
+{
+    list-style:none;
+    font-size:12px;
+    border:solid 1px #CCCCCC;
+    word-break:break-all;
+    white-space:normal;
+
+    zoom: 1;
+    width:102px;
+    overflow:hidden;
+}
+
+.avatar img
+{
+    float:left; 
+    overflow:hidden;
+    padding: 1px;
+}
+
+.ttGrey
+{
+    padding: 5px 0 5px 5px;
+    background-color: #E4E4E4;
+    font-weight:bold;
+}
+
+.grey
+{
+    font-size:12px;
+    color:Gray;
+    font-weight:normal;
+    font-family:Arial;
+}
+
+.flashbg
+{
+    position: absolute;
+    z-index: 1;
+}
+
+/*全局*/
+
+
+/*Headc*/
+#headc
+{
+    background-color: #E3E3E1;
+    color: #FFFFFF;
+    border-bottom:1px solid #CCCCCC;
+}
+
+#headc a
+{
+    color:#999999;
+}
+
+#headc #name
+{
+    font-size: 18px;
+    font-family: 微软雅黑, 'Courier New' , Courier, monospace;
+    float:left;
+    padding:10px 0 10px 10px;
+}
+
+#headc #name a
+{
+    text-decoration:none;
+}
+
+#headc #title
+{
+    font-size: 12px;
+    color: #666666;
+    padding: 45px 20px 0 0;
+    text-align: right;
+}
+
+#headc #title a
+{
+    color: #C60A00;
+}
+
+#headc #login
+{
+    float:right;
+    padding:5px 0 0 0;
+}
+
+#headc #menu
+{
+    height: 21px;
+    background-image: url('../Images/bg1.jpg');
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    clear:both;
+    text-align:right;
+    padding:3px 10px 0 0;
+}
+
+/*Headc*/
+
+
+/*Middle*/
+#middle
+{
+    background-color: #FFFFFF;
+    background-image: url( '../Images/bg3.jpg' );
+    background-repeat: repeat-x;
+}
+
+#middle #index
+{
+    background-color: #F7FAFE;
+    text-align: center;
+    background-image: url('../Images/bg2.jpg');
+}
+
+#middle #content
+{
+    padding:30px 30px 50px 30px;
+    margin:0 0 0 230px;
+}
+
+#middle #content .title
+{
+    font-size:20px;
+    padding:0 0 10px 0;
+    font-weight:bold;
+    color:#778997;
+    font-family:'微软雅黑','黑体',Arial Black;
+    border-bottom:1px solid #CCCCCC;
+    margin:0 0 20px 0;
+}
+
+#middle #content .content a
+{
+    color:Black;
+}
+
+#middle #content .content li
+{
+    list-style-image: url('../Images/contentlist1.gif');
+    border-bottom: 1px solid #EEEEEE;
+    margin: 0 0 10px 0;
+    list-style-position: inside;
+}
+
+#middle #left
+{
+    width: 190px;
+    background-color: #EFEFEF;
+    padding: 30px 10px 10px 20px;
+    float: left;
+    background-image: url(  '../Images/menuBg1.gif' );
+    background-repeat: repeat-x;
+    margin:10px;
+    border:1px solid #D2CECD;
+}
+
+#middle #left li
+{
+    background-position: 0px 3px;
+    background-image: url(   '../Images/menulist2.jpg' );
+    background-repeat: repeat-x;
+    padding:0 0 0 25px;
+    width:160px;
+}
+
+#middle #pagesize
+{
+    text-align:center;
+    margin:30px 0 0 0;
+    font-size:12px;
+}
+
+#middle #pagesize a:herf
+{
+    text-decoration:underline;
+}
+
+#middle #pagesize li
+{
+    float:left;
+    margin:0 10px 0 0;
+}
+/*Middle*/
+
+/*Bottom*/
+#bottom
+{
+    clear:both;
+    background-color:#E3E3E1;
+}
+
+#bottom #copy
+{
+    padding:25px 0 5px 0;
+    text-align:center;
+    font-size:12px;
+}
+
+#bottom #copy .gs
+{
+    text-align:right;
+    width:300px;
+    float:left;
+    padding:0 10px 0 0;
+}
+
+#bottom #copy .txt
+{
+    height:50px;
+    text-align:left;
+}
+
+
+/*Bottom*/
+
+
+/*addArticle*/
+#addArticle
+{
+    margin:30px;
+}
+
+#addArticle .txt
+{
+    border:1px solid #999999;
+    font-size:14px;
+    padding:2px;
+}
+
+#addArticle .btn
+{
+    height:23px; padding:0 1.0em;
+    border:1px solid;
+    border-color:#66acff #094fa1 #094fa1 #66acff;
+    background:#2680e9;
+    color:#fff;
+    letter-spacing:0.3em; 
+    cursor:pointer;
+}
+/*addArticle*/
+
+/*left imglink*/
+#ImgaeList
+{
+    margin:30px 0 0 0;
+    text-align:left;
+}
+
+#ImgaeList ul dd img
+{
+    border:0px;
+    width:80px;
+    height:80px;
+}
+    
+#ImgaeList ul
+{
+    margin:0;
+    @margin:0 0 0 -40px;
+    padding:0;
+    list-style:none;
+}
+
+#ImgaeList ul dd
+{
+    background-image:none;
+    padding:0 0 13px 0;
+    margin:0 0 13px 0;
+    list-style:none;
+    font-size:12px;
+    border-bottom:solid 1px #CCCCCC;
+    word-break:break-all;
+    white-space:normal;
+    overflow:auto;
+    zoom: 1;
+    list-style:none;
+}
+
+#ImgaeList ul dd a
+{
+    font-size:14px;
+}
+
+#ImgaeList ul dd img
+{
+    float:left; 
+    overflow:hidden;
+    border:1px solid #CCCCCC;
+    margin: 0 5px 0 0;
+    padding: 1px;
+}
+
+#ImgaeList ul dd a img
+{
+    padding: 1px;
+    border: 1px solid #ccc;
+}
+
+#ImgaeList ul dd a:hover img
+{
+    display: block;
+    border: 1px solid #003399;
+}
+
+/*left imglink*/
