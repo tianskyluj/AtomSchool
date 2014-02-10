@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+  <class name="Subject" table="T_Subject">
+    <cache usage="read-write"/>
+    <id name="ID" type="Guid">
+      <column name="SubjectID" index="PK_Subject"/>
+      <generator class="assigned" />
+    </id>
+
+    <!--科目名称-->
+    <property name="Name" type="string">
+      <column name="Name" length="50" not-null="true"/>
+    </property>
+    
+  </class>
+
+</hibernate-mapping>

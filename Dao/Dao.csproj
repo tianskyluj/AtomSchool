@@ -67,49 +67,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IFlowRepository.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Implement\FlowRepository.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Implement\UserInfoRepository.cs" />
-    <Compile Include="Implement\ForumRepository.cs" />
     <Compile Include="Implement\ArticleRepository.cs" />
     <Compile Include="Implement\CategoryRepository.cs" />
-    <Compile Include="Implement\GlobalSettingRepository.cs" />
-    <Compile Include="Implement\SystemModelRepository.cs" />
-    <Compile Include="Implement\RegistrationRepository.cs" />
-    <Compile Include="Implement\ProvinceRepository.cs" />
     <Compile Include="Implement\CityRepository.cs" />
-    <Compile Include="Implement\RegionRepository.cs" />
     <Compile Include="Implement\DepartmentRepository.cs" />
-    <Compile Include="Implement\RoleRepository.cs" />
-    <Compile Include="Implement\RoleProvinceRepository.cs" />
-    <Compile Include="Implement\RoleCityRepository.cs" />
-    <Compile Include="Implement\RoleRegionRepository.cs" />
-    <Compile Include="Implement\RoleDepartmentRepository.cs" />
-    <Compile Include="Implement\RoleUserRepository.cs" />
-    <Compile Include="Implement\EmailRepository.cs" />
-    <Compile Include="Implement\EmailReceiveUserRelationRepository.cs" />
-    <Compile Include="Implement\TaskRepository.cs" />
-    <Compile Include="Implement\TaskStateRepository.cs" />
-    <Compile Include="Implement\TaskReceiveUserRelationRepository.cs" />
-    <Compile Include="Implement\TaskLevelRepository.cs" />
-    <Compile Include="Implement\ApplyTypeRepository.cs" />
-    <Compile Include="Implement\ApplyRepository.cs" />
-    <Compile Include="Implement\CheckLogRepository.cs" />
-    <Compile Include="Implement\DocPassRepository.cs" />
-    <Compile Include="Implement\DocReceiveUserRelationRepository.cs" />
-    <Compile Include="Implement\CustomRepository.cs" />
-    <Compile Include="Implement\CustomTypeRepository.cs" />
-    <Compile Include="Implement\CustomMaintainRepository.cs" />
-    <Compile Include="Implement\MaintainTypeRepository.cs" />
-    <Compile Include="Implement\MaintainMethodRepository.cs" />
+    <Compile Include="Implement\ForumRepository.cs" />
+    <Compile Include="Implement\GlobalSettingRepository.cs" />
     <Compile Include="Implement\NoticeRepository.cs" />
-    <Compile Include="Implement\UploadFileRepository.cs" />
+    <Compile Include="Implement\ProvinceRepository.cs" />
+    <Compile Include="Implement\RegionRepository.cs" />
+    <Compile Include="Implement\RegistrationRepository.cs" />
     <Compile Include="Implement\RightsRepository.cs" />
+    <Compile Include="Implement\RoleCityRepository.cs" />
+    <Compile Include="Implement\RoleDepartmentRepository.cs" />
+    <Compile Include="Implement\RoleProvinceRepository.cs" />
+    <Compile Include="Implement\RoleRegionRepository.cs" />
+    <Compile Include="Implement\RoleRepository.cs" />
     <Compile Include="Implement\RoleRightsRepository.cs" />
+    <Compile Include="Implement\RoleUserRepository.cs" />
+    <Compile Include="Implement\SystemModelRepository.cs" />
+    <Compile Include="Implement\UploadFileRepository.cs" />
+    <Compile Include="Implement\UserInfoRepository.cs" />
+    <Compile Include="Implement\GradeTypeRepository.cs" />
+    <Compile Include="Implement\GradeRepository.cs" />
+    <Compile Include="Implement\SubjectRepository.cs" />
+    <Compile Include="Implement\TeacherRepository.cs" />
+    <Compile Include="Implement\ClassesRepository.cs" />
+    <Compile Include="Implement\ClassTeacherRelationRepository.cs" />
+    <Compile Include="Implement\StudentRepository.cs" />
+    <Compile Include="Implement\StudentClassRelateionRepository.cs" />
+    <Compile Include="Implement\HomeWorkRepository.cs" />
     <Compile Include="IRepository`1.cs" />
     <Compile Include="IUserInfoRepository.cs" />
     <Compile Include="RepositoryBase`1.cs" />
@@ -130,26 +117,19 @@
     <Compile Include="IRoleRegionRepository.cs" />
     <Compile Include="IRoleDepartmentRepository.cs" />
     <Compile Include="IRoleUserRepository.cs" />
-    <Compile Include="IEmailRepository.cs" />
-    <Compile Include="IEmailReceiveUserRelationRepository.cs" />
-    <Compile Include="ITaskRepository.cs" />
-    <Compile Include="ITaskStateRepository.cs" />
-    <Compile Include="ITaskReceiveUserRelationRepository.cs" />
-    <Compile Include="ITaskLevelRepository.cs" />
-    <Compile Include="IApplyTypeRepository.cs" />
-    <Compile Include="IApplyRepository.cs" />
-    <Compile Include="ICheckLogRepository.cs" />
-    <Compile Include="IDocPassRepository.cs" />
-    <Compile Include="IDocReceiveUserRelationRepository.cs" />
-    <Compile Include="ICustomRepository.cs" />
-    <Compile Include="ICustomTypeRepository.cs" />
-    <Compile Include="ICustomMaintainRepository.cs" />
-    <Compile Include="IMaintainTypeRepository.cs" />
-    <Compile Include="IMaintainMethodRepository.cs" />
     <Compile Include="INoticeRepository.cs" />
     <Compile Include="IUploadFileRepository.cs" />
     <Compile Include="IRightsRepository.cs" />
     <Compile Include="IRoleRightsRepository.cs" />
+    <Compile Include="IGradeTypeRepository.cs" />
+    <Compile Include="IGradeRepository.cs" />
+    <Compile Include="ISubjectRepository.cs" />
+    <Compile Include="ITeacherRepository.cs" />
+    <Compile Include="IClassesRepository.cs" />
+    <Compile Include="IClassTeacherRelationRepository.cs" />
+    <Compile Include="IStudentRepository.cs" />
+    <Compile Include="IStudentClassRelateionRepository.cs" />
+    <Compile Include="IHomeWorkRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
@@ -162,8 +142,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Config\Dao.xml" />
-    <EmbeddedResource Include="Config\DaoBase.xml" />
+    <EmbeddedResource Include="Config\Dao.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\DaoBase.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

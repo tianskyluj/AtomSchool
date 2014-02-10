@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GradeType>
+  <type name="小学" orderIndex="0" />
+  <type name="初中" orderIndex="1" />
+  <type name="高中" orderIndex="1" />
+</GradeType>

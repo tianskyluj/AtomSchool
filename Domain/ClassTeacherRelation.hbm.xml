@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="ClassTeacherRelation" table="T_ClassTeacherRelation">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="ClassTeacherRelationID" index="PK_ClassTeacherRelation"/>
+			<generator class="assigned" />
+		</id>
+
+    <!--班级-->
+    <many-to-one name="Classes" column="ClassesID" class="Classes" not-null="true"
+                  cascade="save-update" foreign-key="FK_ClassTeacherRelation_Classes"/>
+
+    <!--老师-->
+    <many-to-one name="Teacher" column="TeacherID" class="Teacher" not-null="true"
+                  cascade="save-update" foreign-key="FK_ClassTeacherRelation_Teacher"/>
+
+    <!--教师在本班教授的科目-->
+    <many-to-one name="Subject" column="SubjectID" class="Subject" not-null="true"
+                  cascade="save-update" foreign-key="FK_ClassTeacherRelation_Subject"/>
+	</class>
+
+</hibernate-mapping>

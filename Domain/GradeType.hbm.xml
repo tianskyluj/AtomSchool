@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+  <class name="GradeType" table="T_GradeType">
+    <cache usage="read-write"/>
+    <id name="ID" type="Guid">
+      <column name="GradeTypeID" index="PK_GradeType"/>
+      <generator class="assigned" />
+    </id>
+
+    <!--年纪类型名称-->
+    <property name="Name" type="string">
+      <column name="Name" length="50" not-null="true"/>
+    </property>
+    
+  </class>
+
+</hibernate-mapping>

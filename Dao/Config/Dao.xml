@@ -69,72 +69,6 @@
     <property name="HibernateTemplate" ref="HibernateTemplate"/>
   </object>
 
-  <object id="Repository.Email" type="Dao.Implement.EmailRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.EmailReceiveUserRelation" type="Dao.Implement.EmailReceiveUserRelationRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.Task" type="Dao.Implement.TaskRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-  <object id="Repository.TaskState" type="Dao.Implement.TaskStateRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-  <object id="Repository.TaskLevel" type="Dao.Implement.TaskLevelRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.TaskReceiveUserRelation" type="Dao.Implement.TaskReceiveUserRelationRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.ApplyType" type="Dao.Implement.ApplyTypeRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.Flow" type="Dao.Implement.FlowRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.Apply" type="Dao.Implement.ApplyRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.CheckLog" type="Dao.Implement.CheckLogRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.DocPass" type="Dao.Implement.DocPassRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-  
-  <object id="Repository.DocReceiveUserRelation" type="Dao.Implement.DocReceiveUserRelationRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.Custom" type="Dao.Implement.CustomRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.CustomType" type="Dao.Implement.CustomTypeRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.CustomMaintain" type="Dao.Implement.CustomMaintainRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.MaintainType" type="Dao.Implement.MaintainTypeRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
-  <object id="Repository.MaintainMethod" type="Dao.Implement.MaintainMethodRepository, Dao">
-    <property name="HibernateTemplate" ref="HibernateTemplate"/>
-  </object>
-
   <object id="Repository.Notice" type="Dao.Implement.NoticeRepository, Dao">
     <property name="HibernateTemplate" ref="HibernateTemplate"/>
   </object>
@@ -148,6 +82,42 @@
   </object>
 
   <object id="Repository.RoleRights" type="Dao.Implement.RoleRightsRepository, Dao">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="Repository.GradeType" type="Dao.Implement.GradeTypeRepository, Dao">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="Repository.Grade" type="Dao.Implement.GradeRepository, Dao">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="Repository.Subject" type="Dao.Implement.SubjectRepository, Dao">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="Repository.Teacher" type="Dao.Implement.TeacherRepository, Dao">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="Repository.Classes" type="Dao.Implement.ClassesRepository, Dao">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  
+  <object id="Repository.ClassTeacherRelation" type="Dao.Implement.ClassTeacherRelationRepository, Dao">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  
+  <object id="Repository.Student" type="Dao.Implement.StudentRepository, Dao">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  
+  <object id="Repository.StudentClassRelateion" type="Dao.Implement.StudentClassRelateionRepository, Dao">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  
+  <object id="Repository.HomeWork" type="Dao.Implement.HomeWorkRepository, Dao">
     <property name="HibernateTemplate" ref="HibernateTemplate"/>
   </object>
 

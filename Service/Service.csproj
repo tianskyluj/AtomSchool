@@ -42,13 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GenericManagerBase`1.cs" />
-    <Compile Include="IFlowManager.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="IGenericManager`1.cs" />
-    <Compile Include="Implement\FlowManager.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Implement\RegistrationManager.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -68,26 +62,19 @@
     <Compile Include="Implement\RoleRegionManager.cs" />
     <Compile Include="Implement\RoleDepartmentManager.cs" />
     <Compile Include="Implement\RoleUserManager.cs" />
-    <Compile Include="Implement\EmailManager.cs" />
-    <Compile Include="Implement\EmailReceiveUserRelationManager.cs" />
-    <Compile Include="Implement\TaskManager.cs" />
-    <Compile Include="Implement\TaskStateManager.cs" />
-    <Compile Include="Implement\TaskReceiveUserRelationManager.cs" />
-    <Compile Include="Implement\TaskLevelManager.cs" />
-    <Compile Include="Implement\ApplyTypeManager.cs" />
-    <Compile Include="Implement\ApplyManager.cs" />
-    <Compile Include="Implement\CheckLogManager.cs" />
-    <Compile Include="Implement\DocPassManager.cs" />
-    <Compile Include="Implement\DocReceiveUserRelationManager.cs" />
-    <Compile Include="Implement\CumtomManager.cs" />
-    <Compile Include="Implement\CumtomTypeManager.cs" />
-    <Compile Include="Implement\CumtomMaintainManager.cs" />
-    <Compile Include="Implement\MaintainTypeManager.cs" />
-    <Compile Include="Implement\MaintainMethodManager.cs" />
     <Compile Include="Implement\NoticeManager.cs" />
     <Compile Include="Implement\UploadFileManager.cs" />
     <Compile Include="Implement\RightsManager.cs" />
     <Compile Include="Implement\RoleRightsManager.cs" />
+    <Compile Include="Implement\GradeTypeManager.cs" />
+    <Compile Include="Implement\GradeManager.cs" />
+    <Compile Include="Implement\SubjectManager.cs" />
+    <Compile Include="Implement\TeacherManager.cs" />
+    <Compile Include="Implement\ClassesManager.cs" />
+    <Compile Include="Implement\ClassTeacherRelationManager.cs" />
+    <Compile Include="Implement\StudentManager.cs" />
+    <Compile Include="Implement\StudentClassRelateionManager.cs" />
+    <Compile Include="Implement\HomeWorkManager.cs" />
     <Compile Include="IRegistrationManager.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -108,26 +95,19 @@
     <Compile Include="IRoleRegionManager.cs" />
     <Compile Include="IRoleDepartmentManager.cs" />
     <Compile Include="IRoleUserManager.cs" />
-    <Compile Include="IEmailManager.cs" />
-    <Compile Include="IEmailReceiveUserRelationManager.cs" />
-    <Compile Include="ITaskManager.cs" />
-    <Compile Include="ITaskStateManager.cs" />
-    <Compile Include="ITaskReceiveUserRelationManager.cs" />
-    <Compile Include="ITaskLevelManager.cs" />
-    <Compile Include="IApplyTypeManager.cs" />
-    <Compile Include="IApplyManager.cs" />
-    <Compile Include="ICheckLogManager.cs" />
-    <Compile Include="IDocPassManager.cs" />
-    <Compile Include="IDocReceiveUserRelationManager.cs" />
-    <Compile Include="ICustomManager.cs" />
-    <Compile Include="ICustomTypeManager.cs" />
-    <Compile Include="ICustomMaintainManager.cs" />
-    <Compile Include="IMaintainTypeManager.cs" />
-    <Compile Include="IMaintainMethodManager.cs" />
     <Compile Include="INoticeManager.cs" />
     <Compile Include="IUploadFileManager.cs" />
     <Compile Include="IRightsManager.cs" />
     <Compile Include="IRoleRightsManager.cs" />
+    <Compile Include="IGradeTypeManager.cs" />
+    <Compile Include="IGradeManager.cs" />
+    <Compile Include="ISubjectManager.cs" />
+    <Compile Include="ITeacherManager.cs" />
+    <Compile Include="IClassesManager.cs" />
+    <Compile Include="IClassTeacherRelationManager.cs" />
+    <Compile Include="IStudentManager.cs" />
+    <Compile Include="IStudentClassRelateionManager.cs" />
+    <Compile Include="IHomeWorkManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
@@ -144,7 +124,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Config\Service.xml" />
+    <EmbeddedResource Include="Config\Service.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Config\ServiceBase.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

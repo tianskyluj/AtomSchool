@@ -5,7 +5,7 @@
             <div>
                 <div class="user">
                     <img  id="avatar" class="avatar" width="25" height="25" src=<%: ViewData["Avatar"] %> alt="Julio Marquez"/>
-                    <span data-toggle="dropdown"><%: ViewData["name"] %> <a class="sign" href="javascript:void(0)" style="float:right"><%: ViewData["registration"]%></a></span>
+                    <span data-toggle="dropdown" ><%: ViewData["name"] %> <a style="display:none " class="sign" href="javascript:void(0)" style="float:right"><%: ViewData["registration"]%></a></span>
                 </div>
                 <div class="navigation-sidebar">
                     <i class="switch-sidebar-icon icon-chevron-left"></i>

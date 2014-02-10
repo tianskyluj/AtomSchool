@@ -29,20 +29,15 @@ namespace WebSite
             base.Application_Start(sender, e);
 
             this.SetInitAccount();
-
             this.SetGlobalSetting();
-
             this.LoadControllerAndAction();
-
             this.LoadSystemModel();
 
-            this.LoadTaskLevel();
-            this.LoadTaskState();
-            this.LoadApplyType();
-            this.LoadCustomType();
-            this.LoadMaintainMethod();
-            this.LoadMaintainType();
             this.LoadRightsType();
+
+            this.LoadGradeType();
+            this.LoadGrade();
+            this.LoadSubject();
         }
 
         /// <summary>
@@ -123,169 +118,6 @@ namespace WebSite
         }
 
         /// <summary>
-        /// 按config文件夹中的TaskLevel.xml配置文件加任务等级
-        /// </summary>
-        private void LoadTaskLevel()
-        {
-            string xmlPath = "~/Config/TaskLevel.xml";
-            IApplicationContext cxt = ContextRegistry.GetContext();
-            ITaskLevelManager manger = (ITaskLevelManager)cxt.GetObject("Manager.TaskLevel");
-            IList<Domain.TaskLevel> taskLevelList = manger.LoadAll();
-            if (taskLevelList.Count == 0)
-            {
-                //manger.LoadSystemModelWithXML();
-                // 把xml文件转换成dataSet
-                Atom.Common.XML.XMLProcess xmlProcess = new Atom.Common.XML.XMLProcess();
-                DataSet xmlDS = xmlProcess.GetDataSetByXml(xmlPath);
-                // 生成目录
-                for (int i = 0; i < xmlDS.Tables[0].Rows.Count; i++)
-                {
-                    Domain.TaskLevel entity = new Domain.TaskLevel();
-                    entity.ID = Guid.NewGuid();
-                    entity.LevelName = xmlDS.Tables[0].Rows[i]["name"].ToStr();
-                    entity.OrderIndex = xmlDS.Tables[0].Rows[i]["orderIndex"].ToInt();
-                    manger.Save(entity);
-                }
-            }
-        }
-
-        /// <summary>
-        /// 按config文件夹中的TaskState.xml配置文件加任务等级
-        /// </summary>
-        private void LoadTaskState()
-        {
-            string xmlPath = "~/Config/TaskState.xml";
-            IApplicationContext cxt = ContextRegistry.GetContext();
-            ITaskStateManager manger = (ITaskStateManager)cxt.GetObject("Manager.TaskState");
-            IList<Domain.TaskState> taskStateList = manger.LoadAll();
-            if (taskStateList.Count == 0)
-            {
-                //manger.LoadSystemModelWithXML();
-                // 把xml文件转换成dataSet
-                Atom.Common.XML.XMLProcess xmlProcess = new Atom.Common.XML.XMLProcess();
-                DataSet xmlDS = xmlProcess.GetDataSetByXml(xmlPath);
-                // 生成目录
-                for (int i = 0; i < xmlDS.Tables[0].Rows.Count; i++)
-                {
-                    Domain.TaskState entity = new Domain.TaskState();
-                    entity.ID = Guid.NewGuid();
-                    entity.StateName = xmlDS.Tables[0].Rows[i]["name"].ToStr();
-                    entity.OrderIndex = xmlDS.Tables[0].Rows[i]["orderIndex"].ToInt();
-                    manger.Save(entity);
-                }
-            }
-        }
-
-        /// <summary>
-        /// 按config文件夹中的ApplyType.xml配置文件加任务等级
-        /// </summary>
-        private void LoadApplyType()
-        {
-            string xmlPath = "~/Config/ApplyType.xml";
-            IApplicationContext cxt = ContextRegistry.GetContext();
-            IApplyTypeManager manger = (IApplyTypeManager)cxt.GetObject("Manager.ApplyType");
-            IList<Domain.ApplyType> applyTypeList = manger.LoadAll();
-            if (applyTypeList.Count == 0)
-            {
-                //manger.LoadSystemModelWithXML();
-                // 把xml文件转换成dataSet
-                Atom.Common.XML.XMLProcess xmlProcess = new Atom.Common.XML.XMLProcess();
-                DataSet xmlDS = xmlProcess.GetDataSetByXml(xmlPath);
-                // 生成目录
-                for (int i = 0; i < xmlDS.Tables[0].Rows.Count; i++)
-                {
-                    Domain.ApplyType entity = new Domain.ApplyType();
-                    entity.ID = Guid.NewGuid();
-                    entity.ApplyTypeName = xmlDS.Tables[0].Rows[i]["name"].ToStr();
-                    entity.Flow = new Domain.Flow();
-                    entity.OrderIndex = xmlDS.Tables[0].Rows[i]["orderIndex"].ToInt();
-                    manger.Save(entity);
-                }
-            }
-        }
-
-        /// <summary>
-        /// 按config文件夹中的CustomType.xml配置文件加任务等级
-        /// </summary>
-        private void LoadCustomType()
-        {
-            string xmlPath = "~/Config/CustomType.xml";
-            IApplicationContext cxt = ContextRegistry.GetContext();
-            ICustomTypeManager manger = (ICustomTypeManager)cxt.GetObject("Manager.CustomType");
-            IList<Domain.CustomType> customTypeList = manger.LoadAll();
-            if (customTypeList.Count == 0)
-            {
-                //manger.LoadSystemModelWithXML();
-                // 把xml文件转换成dataSet
-                Atom.Common.XML.XMLProcess xmlProcess = new Atom.Common.XML.XMLProcess();
-                DataSet xmlDS = xmlProcess.GetDataSetByXml(xmlPath);
-                // 生成目录
-                for (int i = 0; i < xmlDS.Tables[0].Rows.Count; i++)
-                {
-                    Domain.CustomType entity = new Domain.CustomType();
-                    entity.ID = Guid.NewGuid();
-                    entity.TypeName = xmlDS.Tables[0].Rows[i]["name"].ToStr();
-                    entity.OrderIndex = xmlDS.Tables[0].Rows[i]["orderIndex"].ToInt();
-                    manger.Save(entity);
-                }
-            }
-        }
-
-        /// <summary>
-        /// 按config文件夹中的MaintainMethod.xml配置文件加任务等级
-        /// </summary>
-        private void LoadMaintainMethod()
-        {
-            string xmlPath = "~/Config/MaintainMethod.xml";
-            IApplicationContext cxt = ContextRegistry.GetContext();
-            IMaintainMethodManager manger = (IMaintainMethodManager)cxt.GetObject("Manager.MaintainMethod");
-            IList<Domain.MaintainMethod> maintainMethodList = manger.LoadAll();
-            if (maintainMethodList.Count == 0)
-            {
-                //manger.LoadSystemModelWithXML();
-                // 把xml文件转换成dataSet
-                Atom.Common.XML.XMLProcess xmlProcess = new Atom.Common.XML.XMLProcess();
-                DataSet xmlDS = xmlProcess.GetDataSetByXml(xmlPath);
-                // 生成目录
-                for (int i = 0; i < xmlDS.Tables[0].Rows.Count; i++)
-                {
-                    Domain.MaintainMethod entity = new Domain.MaintainMethod();
-                    entity.ID = Guid.NewGuid();
-                    entity.MethodName = xmlDS.Tables[0].Rows[i]["name"].ToStr();
-                    entity.OrderIndex = xmlDS.Tables[0].Rows[i]["orderIndex"].ToInt();
-                    manger.Save(entity);
-                }
-            }
-        }
-
-        /// <summary>
-        /// 按config文件夹中的MaintainMethod.xml配置文件加任务等级
-        /// </summary>
-        private void LoadMaintainType()
-        {
-            string xmlPath = "~/Config/MaintainType.xml";
-            IApplicationContext cxt = ContextRegistry.GetContext();
-            IMaintainTypeManager manger = (IMaintainTypeManager)cxt.GetObject("Manager.MaintainType");
-            IList<Domain.MaintainType> maintainTypeList = manger.LoadAll();
-            if (maintainTypeList.Count == 0)
-            {
-                //manger.LoadSystemModelWithXML();
-                // 把xml文件转换成dataSet
-                Atom.Common.XML.XMLProcess xmlProcess = new Atom.Common.XML.XMLProcess();
-                DataSet xmlDS = xmlProcess.GetDataSetByXml(xmlPath);
-                // 生成目录
-                for (int i = 0; i < xmlDS.Tables[0].Rows.Count; i++)
-                {
-                    Domain.MaintainType entity = new Domain.MaintainType();
-                    entity.ID = Guid.NewGuid();
-                    entity.TypeName = xmlDS.Tables[0].Rows[i]["name"].ToStr();
-                    entity.OrderIndex = xmlDS.Tables[0].Rows[i]["orderIndex"].ToInt();
-                    manger.Save(entity);
-                }
-            }
-        }
-
-        /// <summary>
         /// 按config文件夹中的Rights.xml配置文件加权限类型
         /// </summary>
         private void LoadRightsType()
@@ -307,6 +139,89 @@ namespace WebSite
                     entity.ID = Guid.NewGuid();
                     entity.RightName = xmlDS.Tables[0].Rows[i]["name"].ToStr();
                     entity.OrderIndex = xmlDS.Tables[0].Rows[i]["orderIndex"].ToInt();
+                    manger.Save(entity);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 按config文件夹中的GradeType.xml配置文件加载年级类型
+        /// </summary>
+        private void LoadGradeType()
+        {
+            string xmlPath = "~/Config/GradeType.xml";
+            IApplicationContext cxt = ContextRegistry.GetContext();
+            IGradeTypeManager manger = (IGradeTypeManager)cxt.GetObject("Manager.GradeType");
+            IList<Domain.GradeType> GradeTypeList = manger.LoadAll();
+            if (GradeTypeList.Count == 0)
+            {
+                //manger.LoadSystemModelWithXML();
+                // 把xml文件转换成dataSet
+                Atom.Common.XML.XMLProcess xmlProcess = new Atom.Common.XML.XMLProcess();
+                DataSet xmlDS = xmlProcess.GetDataSetByXml(xmlPath);
+                // 生成目录
+                for (int i = 0; i < xmlDS.Tables[0].Rows.Count; i++)
+                {
+                    Domain.GradeType entity = new Domain.GradeType();
+                    entity.ID = Guid.NewGuid();
+                    entity.Name = xmlDS.Tables[0].Rows[i]["name"].ToStr();
+                    manger.Save(entity);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 按config文件夹中的Grade.xml配置文件加载年级
+        /// </summary>
+        private void LoadGrade()
+        {
+            string xmlPath = "~/Config/Grade.xml";
+            IApplicationContext cxt = ContextRegistry.GetContext();
+            IGradeManager manger = (IGradeManager)cxt.GetObject("Manager.Grade");
+            IGradeTypeManager gradeTypeManger = (IGradeTypeManager)cxt.GetObject("Manager.GradeType");
+            IList<Domain.Grade> GradeList = manger.LoadAll();
+            if (GradeList.Count == 0)
+            {
+                //manger.LoadSystemModelWithXML();
+                // 把xml文件转换成dataSet
+                Atom.Common.XML.XMLProcess xmlProcess = new Atom.Common.XML.XMLProcess();
+                DataSet xmlDS = xmlProcess.GetDataSetByXml(xmlPath);
+                // 生成目录
+                string  parentId = "0";
+                for (int i = 0; i < xmlDS.Tables[0].Rows.Count; i++)
+                {
+                    Domain.Grade entity = new Domain.Grade();
+                    entity.ID = Guid.NewGuid();
+                    entity.Name = xmlDS.Tables[0].Rows[i]["name"].ToStr();
+                    entity.GradeType = gradeTypeManger.LoadAll().FirstOrDefault(f => f.Name == xmlDS.Tables[0].Rows[i]["gradeTypeName"].ToStr());
+                    entity.ParentGrade = parentId;
+                    manger.Save(entity);
+                    parentId = entity.ID.ToStr();
+                }
+            }
+        }
+
+        /// <summary>
+        /// 按config文件夹中的Subject.xml配置文件加载科目
+        /// </summary>
+        private void LoadSubject()
+        {
+            string xmlPath = "~/Config/Subject.xml";
+            IApplicationContext cxt = ContextRegistry.GetContext();
+            ISubjectManager manger = (ISubjectManager)cxt.GetObject("Manager.Subject");
+            IList<Domain.Subject> SubjectList = manger.LoadAll();
+            if (SubjectList.Count == 0)
+            {
+                //manger.LoadSystemModelWithXML();
+                // 把xml文件转换成dataSet
+                Atom.Common.XML.XMLProcess xmlProcess = new Atom.Common.XML.XMLProcess();
+                DataSet xmlDS = xmlProcess.GetDataSetByXml(xmlPath);
+                // 生成目录
+                for (int i = 0; i < xmlDS.Tables[0].Rows.Count; i++)
+                {
+                    Domain.Subject entity = new Domain.Subject();
+                    entity.ID = Guid.NewGuid();
+                    entity.Name = xmlDS.Tables[0].Rows[i]["name"].ToStr();
                     manger.Save(entity);
                 }
             }

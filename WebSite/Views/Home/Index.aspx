@@ -43,7 +43,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <% foreach (var item in (this.ViewData["EmailReceiveUserRelation"] as IEnumerable<Domain.EmailReceiveUserRelation>).OrderBy(f => f.Email.SendTime))
+                                        <%--<% foreach (var item in (this.ViewData["EmailReceiveUserRelation"] as IEnumerable<Domain.EmailReceiveUserRelation>).OrderBy(f => f.Email.SendTime))
                                            { %>
                                         <tr class="gradeX">
                                             <td>
@@ -56,7 +56,7 @@
                                                 <%= item.Email.SendTime%>
                                             </td>
                                         </tr>
-                                        <% } %>
+                                        <% } %>--%>
                                     </tbody>
                                 </table>
                             </div>
@@ -88,7 +88,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <% foreach (var item in (this.ViewData["TaskReceiveUserRelation"] as IEnumerable<Domain.TaskReceiveUserRelation>).OrderBy(f => f.Task.SendTime))
+                                        <%--<% foreach (var item in (this.ViewData["TaskReceiveUserRelation"] as IEnumerable<Domain.TaskReceiveUserRelation>).OrderBy(f => f.Task.SendTime))
                                            { %>
                                         <tr class="gradeX">
                                             <td>
@@ -104,7 +104,7 @@
                                                 <%= item.FinishTime%>
                                             </td>
                                         </tr>
-                                        <% } %>
+                                        <% } %>--%>
                                     </tbody>
                                 </table>
                             </div>

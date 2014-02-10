@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="Teacher" table="T_Teacher">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="TeacherID" index="PK_Teacher"/>
+			<generator class="assigned" />
+		</id>
+
+		<!--教师名称-->
+		<property name="Name" type="string">
+			<column name="Name" length="50" not-null="true"/>
+		</property>
+
+    <!--教师登录用户名-->
+    <property name="UserName" type="string">
+      <column name="UserName" length="50" not-null="true"/>
+    </property>
+
+    <!--教授科目-->
+    <many-to-one name="Subject" column="SubjectID" class="Subject" not-null="true"
+                  cascade="save-update" foreign-key="FK_Teacher_Subject"/>
+
+    <!--电话-->
+    <property name="Telephone" type="string">
+      <column name="Telephone" length="50" not-null="true"/>
+    </property>
+	</class>
+
+</hibernate-mapping>

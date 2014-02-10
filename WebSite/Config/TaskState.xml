@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TaskState>
-  <state name="等待确认" orderIndex="0" />
-  <state name="已确认" orderIndex="1" />
-  <state name="已完成" orderIndex="2" />
-  <state name="推迟完成" orderIndex="3" />
-</TaskState>

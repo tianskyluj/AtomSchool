@@ -12,7 +12,6 @@ namespace WebSite.Controllers
     {
         public IUploadFileManager UploadFileManager { get; set; }
         public IUserInfoManager UserInfoManager { get; set; }
-        public IDocReceiveUserRelationManager DocReceiveUserRelationManager { get; set; }
 
         //
         // GET: /SystemModel/
@@ -24,12 +23,6 @@ namespace WebSite.Controllers
             string baseID = Request.QueryString["baseId"];
             ViewData["PDFs"] = UploadFileManager.LoadAll().Where(f => f.BaseID == new Guid(baseID));
 
-            #region 更新公文传递状态
-            DocReceiveUserRelation docUser = DocReceiveUserRelationManager.LoadAll().FirstOrDefault(f => f.DocPass.ID == new Guid(baseID) && f.ReceiveUser.ID==UserInfoManager.GetUserSession().ID);
-            docUser.IsRead = true;
-            docUser.IsReadStateName = "已阅读";
-            DocReceiveUserRelationManager.Update(docUser);
-            #endregion
 
             return View("PDFView");
         }

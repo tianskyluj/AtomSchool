@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="Grade" table="T_Grade">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="GradeID" index="PK_Grade"/>
+			<generator class="assigned" />
+		</id>
+
+		<!--年级名称-->
+		<property name="Name" type="string">
+			<column name="Name" length="50" not-null="true"/>
+		</property>
+
+    <!--年级类型-->
+    <many-to-one name="GradeType" column="GradeTypeID" class="GradeType" not-null="true"
+                  cascade="save-update" foreign-key="FK_Grade_GradeType"/>
+
+    <!--上级-->
+    <property name="ParentGrade" type="string">
+      <column name="ParentGrade" length="50" not-null="true"/>
+    </property>
+
+  </class>
+
+</hibernate-mapping>

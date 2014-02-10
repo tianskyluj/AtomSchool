@@ -20,6 +20,10 @@ namespace WebSite.Controllers
         public IUserInfoManager UserInfoManager { get; set; }
         public IRightsManager RightsManager { get; set; }
         public IRoleRightsManager RoleRightsManager { get; set; }
+        public ISubjectManager SubjectManager { get; set; }
+        public IGradeManager GradeManager { get; set; }
+        public ITeacherManager TeacherManager { get; set; }
+        public IClassesManager ClassesManager { get; set; }
 
         //
         // GET: /System/
@@ -39,6 +43,10 @@ namespace WebSite.Controllers
             ViewData["Role"] = RoleManager.LoadAll();
             ViewData["SysUser"] = UserInfoManager.LoadAll();
             ViewData["Rights"] = RightsManager.LoadAll();
+            ViewData["Subject"] = SubjectManager.LoadAll();
+            ViewData["Grade"] = GradeManager.LoadAll();
+            ViewData["Teacher"] = TeacherManager.LoadAll();
+            ViewData["Class"] = ClassesManager.LoadAll();
             ViewData["NullGuid"] = new Guid();
             return View();
         }

@@ -17,13 +17,16 @@
                     <ul id="myTab" class="nav nav-tabs">
                         <li class="active"><a href="#home" data-toggle="tab"><i class="icon-globe"></i>全局设置</a></li>
                         <li class=""><a href="#model" data-toggle="tab"><i class="icon-th"></i>模块</a></li>
-                        <li class=""><a href="#province" data-toggle="tab"><i class="icon-move"></i>省份</a></li>
+                       <%-- <li class=""><a href="#province" data-toggle="tab"><i class="icon-move"></i>省份</a></li>
                         <li class=""><a href="#city" data-toggle="tab"><i class="icon-move"></i>地市</a></li>
-                        <li class=""><a href="#region" data-toggle="tab"><i class="icon-move"></i>区域</a></li>
+                        <li class=""><a href="#region" data-toggle="tab"><i class="icon-move"></i>区域</a></li>--%>
                         <li class=""><a href="#department" data-toggle="tab"><i class="icon-sitemap"></i>部门</a></li>
                         <li class=""><a href="#role" data-toggle="tab"><i class="icon-group"></i>角色</a></li>
                         <li class=""><a href="#user" data-toggle="tab"><i class="icon-user"></i>用户</a></li>
                         <li class=""><a href="#rights" data-toggle="tab"><i class="icon-lock"></i>权限</a></li>
+                        <li class=""><a href="#subject" data-toggle="tab"><i class="icon-lock"></i>科目</a></li>
+                        <li class=""><a href="#teacher" data-toggle="tab"><i class="icon-lock"></i>教师</a></li>
+                        <li class=""><a href="#class" data-toggle="tab"><i class="icon-lock"></i>班级</a></li>
                     </ul>
                     <div id="myTabContent" class="tab-content">
                         <div class="tab-pane fade active in" id="home">
@@ -613,6 +616,214 @@
                                 </ul>
                             </div>
                         </div>
+                        <div class="tab-pane fade " id="subject">
+	                        <div class="row-fluid">
+		                        <div class="span12">
+			                        <div class="social-box">
+				                        <div class="header">
+					                        <div class="btn-group hidden-phone">
+						                        <a class="btn btn-primary" id="add-row-subject" href="#"><i class="icon-plus"></i>添加 </a>
+						                        <a class="btn btn-danger disabled" href="#" id="delete-row-subject"><i class="icon-trash"></i>批量删除 </a>
+						                        <input style="visibility:hidden" id="subjectID"  />
+						                        <input style="visibility:hidden" id="subjectCheckedNum" value="0" />
+						                        <span style="visibility:hidden" id="subjectIdd"></span>
+					                        </div>
+					                        <div class="tools">
+						                        <a class="btn btn-success btn-advanced" id="A1" href="javascript:void(0)"
+							                        data-toggle="collapse" data-target="#advanced-search"><i class="icon-filter"></i>
+							                        高级查询 </a>
+						                        <div class="btn-group">
+							                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+								                        <i class="icon-cog"></i>
+							                        </button>
+							                        <ul class="dropdown-menu pull-right">
+								                        <li><a href="#">打印</a></li>
+								                        <li><a href="#">保存至PDF</a></li>
+								                        <li class="divider"></li>
+								                        <li><a href="#">导出EXCEL</a></li>
+							                        </ul>
+						                        </div>
+					                        </div>
+				                        </div>
+				                        <div class="body">
+					                        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered"
+						                        id="subjectListTable">
+						                        <thead>
+							                        <tr>
+								                        <th>
+									                        <input type="checkbox" class="toggle-checkboxes" />
+								                        </th>
+								                        <th>
+									                        操作
+								                        </th>
+								                        <th>
+									                        科目
+								                        </th>
+							                        </tr>
+						                        </thead>
+						                        <tbody>
+							                        <% foreach (var item in (this.ViewData["subject"] as IList<Domain.Subject>).OrderBy(f => f.Name))
+							                           { %>
+							                        <tr class="gradeX">
+								                        <td>
+									                        <input type="checkbox" class="checkbox" value='<%= item.ID%>'/>
+								                        </td>
+								                        <td>
+									                        <a class="btn btn-success btn-mini modify" href="#" value='<%= item.ID%>'><i class="icon-edit"></i>修改 </a>
+									                        <a class="btn btn-danger btn-mini delete" href="#" value='<%= item.ID%>'><i class="icon-delete"></i>删除 </a>
+								                        </td>
+								                        <td>
+									                        <%= item.Name%>
+									
+								                        </td>
+							                        </tr>
+							                         <% } %>
+						                        </tbody>
+					                        </table>
+				                        </div>
+			                        </div>
+		                        </div>
+	                        </div>
+                        </div>
+                        <div class="tab-pane fade " id="class">
+	                        <div class="row-fluid">
+		                        <div class="span12">
+			                        <div class="social-box">
+				                        <div class="header">
+					                        <div class="btn-group hidden-phone">
+						                        <a class="btn btn-primary" id="add-row-class" href="#"><i class="icon-plus"></i>添加 </a>
+						                        <a class="btn btn-danger disabled" href="#" id="delete-row-class"><i class="icon-trash"></i>批量删除 </a>
+						                        <input style="visibility:hidden" id="classID"  />
+						                        <input style="visibility:hidden" id="classCheckedNum" value="0" />
+						                        <span style="visibility:hidden" id="classIdd"></span>
+					                        </div>
+					                        <div class="tools">
+						                        <a class="btn btn-success btn-advanced" id="A2" href="javascript:void(0)"
+							                        data-toggle="collapse" data-target="#advanced-search"><i class="icon-filter"></i>
+							                        高级查询 </a>
+						                        <div class="btn-group">
+							                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+								                        <i class="icon-cog"></i>
+							                        </button>
+							                        <ul class="dropdown-menu pull-right">
+								                        <li><a href="#">打印</a></li>
+								                        <li><a href="#">保存至PDF</a></li>
+								                        <li class="divider"></li>
+								                        <li><a href="#">导出EXCEL</a></li>
+							                        </ul>
+						                        </div>
+					                        </div>
+				                        </div>
+				                        <div class="body">
+					                        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered"
+						                        id="classListTable">
+						                        <thead>
+							                        <tr>
+								                        <th>
+									                        <input type="checkbox" class="toggle-checkboxes" />
+								                        </th>
+								                        <th>
+									                        操作
+								                        </th>
+								                        <th>
+									                        班级
+								                        </th>
+							                        </tr>
+						                        </thead>
+						                        <tbody>
+							                        <% foreach (var item in (this.ViewData["class"] as IList<Domain.Classes>).OrderBy(f => f.Name))
+							                           { %>
+							                        <tr class="gradeX">
+								                        <td>
+									                        <input type="checkbox" class="checkbox" value='<%= item.ID%>'/>
+								                        </td>
+								                        <td>
+									                        <a class="btn btn-success btn-mini modify" href="#" value='<%= item.ID%>'><i class="icon-edit"></i>修改 </a>
+									                        <a class="btn btn-danger btn-mini delete" href="#" value='<%= item.ID%>'><i class="icon-delete"></i>删除 </a>
+								                        </td>
+								                        <td>
+									                        <%= item.Name%>
+								                        </td>
+							                        </tr>
+							                         <% } %>
+						                        </tbody>
+					                        </table>
+				                        </div>
+			                        </div>
+		                        </div>
+	                        </div>
+                        </div>
+                        <div class="tab-pane fade " id="teacher">
+	                        <div class="row-fluid">
+		                        <div class="span12">
+			                        <div class="social-box">
+				                        <div class="header">
+					                        <div class="btn-group hidden-phone">
+						                        <a class="btn btn-primary" id="add-row-teacher" href="#"><i class="icon-plus"></i>添加 </a>
+						                        <a class="btn btn-danger disabled" href="#" id="delete-row-teacher"><i class="icon-trash"></i>批量删除 </a>
+						                        <input style="visibility:hidden" id="teacherID"  />
+						                        <input style="visibility:hidden" id="teacherCheckedNum" value="0" />
+						                        <span style="visibility:hidden" id="teacherIdd"></span>
+					                        </div>
+					                        <div class="tools">
+						                        <a class="btn btn-success btn-advanced" id="A8" href="javascript:void(0)"
+							                        data-toggle="collapse" data-target="#advanced-search"><i class="icon-filter"></i>
+							                        高级查询 </a>
+						                        <div class="btn-group">
+							                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+								                        <i class="icon-cog"></i>
+							                        </button>
+							                        <ul class="dropdown-menu pull-right">
+								                        <li><a href="#">打印</a></li>
+								                        <li><a href="#">保存至PDF</a></li>
+								                        <li class="divider"></li>
+								                        <li><a href="#">导出EXCEL</a></li>
+							                        </ul>
+						                        </div>
+					                        </div>
+				                        </div>
+				                        <div class="body">
+					                        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered"
+						                        id="teacherListTable">
+						                        <thead>
+							                        <tr>
+								                        <th>
+									                        <input type="checkbox" class="toggle-checkboxes" />
+								                        </th>
+								                        <th>
+									                        操作
+								                        </th>
+								                        <th>
+									                        教师
+								                        </th>
+							                        </tr>
+						                        </thead>
+						                        <tbody>
+							                        <% foreach (var item in (this.ViewData["Teacher"] as IList<Domain.Teacher>).OrderBy(f => f.Name))
+							                           { %>
+							                        <tr class="gradeX">
+								                        <td>
+									                        <input type="checkbox" class="checkbox" value='<%= item.ID%>'/>
+								                        </td>
+								                        <td>
+									                        <a class="btn btn-success btn-mini modify" href="#" value='<%= item.ID%>'><i class="icon-edit"></i>修改 </a>
+									                        <a class="btn btn-danger btn-mini delete" href="#" value='<%= item.ID%>'><i class="icon-delete"></i>删除 </a>
+								                        </td>
+								                        <td>
+									                        <%= item.Name%>
+								                        </td>
+							                        </tr>
+							                         <% } %>
+						                        </tbody>
+					                        </table>
+				                        </div>
+			                        </div>
+		                        </div>
+	                        </div>
+                        </div>
+
+
+                        <!-- tab页完成 -->
                     </div>
                 </div>
             </div>
@@ -815,7 +1026,7 @@
                      <input id="roleName_edit" type="text" class="input-xlarge" placeholder="填写角色" />
                 </div>
                 <label class="control-label">
-                    所属角色</label>
+                    所属部门</label>
                 <div class="controls">
                     <select id="departmentAttrRole"  class="span3" >
                         <% foreach (var item in (this.ViewData["Department"] as IList<Domain.Department>).OrderBy(f => f.DepartmentName))
@@ -872,6 +1083,117 @@
             <a class="btn btn-primary" id="saveSysUser">保存</a>
         </div>
     </aside>
+    <!-- 科目添加修改弹出框 -->
+    <aside id="addAndUpdateSubject" class="modal hide fade" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="subjectAddOrUpdateTitle"><span id="Span7">添加</span></h3>
+        </div>
+        <div class="modal-body">
+            <div class="control-group">
+                <label class="control-label">
+                    科目</label>
+                <div class="controls">
+                     <input id="subjectName_edit" type="text" class="input-xlarge" placeholder="填写科目名称" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" data-dismiss="modal">关闭</button>
+            <a class="btn btn-primary" id="saveSubject">保存</a>
+        </div>
+    </aside>
+    <!-- 班级添加修改弹出框 -->
+    <aside id="addAndUpdateClass" class="modal hide fade" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="classAddOrUpdateTitle"><span id="Span8">添加</span></h3>
+        </div>
+        <div class="modal-body">
+            <div class="control-group">
+                <label class="control-label">
+                    班级名称</label>
+                <div class="controls">
+                     <input id="className_edit" type="text" class="input-xlarge" placeholder="填写班级名称" />
+                </div>
+            </div>
+             <div class="control-group">
+                <label class="control-label">
+                    年级</label>
+                <div class="controls">
+                    <select id="gradeAttrClass"   class="span3" >
+                        <% foreach (var item in (this.ViewData["Grade"] as IList<Domain.Grade>).OrderBy(f => f.GradeType.Name))
+                           { %>
+                        <option class="opt_gradeAttrClass" value="<%= item.ID %>"><%= item.GradeType.Name%><%= item.Name%></option>
+                        <% } %>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">
+                    班主任</label>
+                <div class="controls">
+                    <select id="teacherAttrClass"  class="span3" >
+                        <% foreach (var item in (this.ViewData["Teacher"] as IList<Domain.Teacher>).OrderBy(f => f.Name))
+                           { %>
+                        <option class="opt_teacherAttrClass" value="<%= item.ID %>"><%= item.Subject.Name%><%= item.Name%></option>
+                        <% } %>
+                    </select>
+                </div>
+            </div>
+            <div style="height:100px;">
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" data-dismiss="modal">关闭</button>
+            <a class="btn btn-primary" id="saveClass">保存</a>
+        </div>
+    </aside>
+    <!-- 教师添加修改弹出框 -->
+    <aside id="addAndUpdateTeacher" class="modal hide fade" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="TeacherAddOrUpdateTitle"><span id="Span9">添加</span></h3>
+        </div>
+        <div class="modal-body">
+            <div class="control-group">
+                <label class="control-label">
+                    姓名</label>
+                <div class="controls">
+                     <input id="teacherName_edit" type="text" class="input-xlarge" placeholder="填写教师姓名" />
+                </div>
+                <label class="control-label">
+                    教师登录名</label>
+                <div class="controls">
+                     <input id="teacherUserName_edit" type="text" class="input-xlarge" placeholder="填写教师登录名" />
+                </div>
+            </div>
+             <div class="control-group">
+                <label class="control-label">
+                    教授科目</label>
+                <div class="controls">
+                    <select id="subjectAttrTeacher"  class="span3" >
+                        <% foreach (var item in (this.ViewData["Subject"] as IList<Domain.Subject>).OrderBy(f => f.Name))
+                           { %>
+                        <option class="opt_subjectAttrTeacher" value="<%= item.ID %>"><%= item.Name%></option>
+                        <% } %>
+                    </select>
+                </div>
+            </div>
+            <div style="height:100px;">
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" data-dismiss="modal">关闭</button>
+            <a class="btn btn-primary" id="saveTeacher">保存</a>
+        </div>
+    </aside>
+
     <div style="visibility: hidden">
         <input data-bind="value:companyName" />
     </div>
@@ -884,5 +1206,8 @@
 <script src="../../Scripts/System/Role.js"></script>
 <script src="../../Scripts/System/SysUser.js"></script>
 <script src="../../Scripts/System/Rights.js"></script>
+<script src="../../Scripts/System/Subject.js"></script>
+<script src="../../Scripts/System/Class.js"></script>
+<script src="../../Scripts/System/Teacher.js"></script>
 <script src="../../assets/js/bootstrap-tree.js"></script>
 </html>

@@ -118,13 +118,11 @@
     <Compile Include="Controllers\RegionController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
-    <Compile Include="Controllers\EmailController.cs" />
-    <Compile Include="Controllers\TaskController.cs" />
-    <Compile Include="Controllers\ApplyController.cs" />
-    <Compile Include="Controllers\DocPassController.cs" />
-    <Compile Include="Controllers\CustomController.cs" />
     <Compile Include="Controllers\UploadFileController.cs" />
     <Compile Include="Controllers\RightsController.cs" />
+    <Compile Include="Controllers\SubjectController.cs" />
+    <Compile Include="Controllers\ClassesController.cs" />
+    <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Core\LocalizationHelpers.cs" />
     <Compile Include="Core\UserPathFckProvider.cs" />
     <Compile Include="Global.asax.cs">
@@ -296,30 +294,17 @@
     <Content Include="assets\js\twitter-bootstrap\bootstrap.js" />
     <Content Include="assets\js\ui-elements.general.js" />
     <Content Include="assets\js\wysihtml5\dist\wysihtml5-0.3.0.min.js" />
+    <Content Include="Config\GradeType.xml" />
     <Content Include="Config\ViewModel.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\TaskLevel.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\TaskState.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\ApplyType.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\CustomType.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\MaintainMethod.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\MaintainType.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Config\RightsType.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Config\Grade.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\Subject.xml" />
     <Content Include="Content\Logon.css" />
     <Content Include="easyui\easyloader.js" />
     <Content Include="easyui\jquery.easyui.min.js" />
@@ -871,39 +856,20 @@
     <Content Include="Images\user_top_l.gif" />
     <Content Include="Images\user_top_r.gif" />
     <Content Include="Scripts\Account\Index.js" />
-    <Content Include="Scripts\Custom\CustomBirthDay.js" />
-    <Content Include="Scripts\Custom\NewActive.js" />
-    <Content Include="Scripts\Custom\ActiveSummary.js" />
-    <Content Include="Scripts\Custom\ActiveWarnning.js" />
-    <Content Include="Scripts\Email\NewEmail.js" />
-    <Content Include="Scripts\Email\Inbox.js" />
-    <Content Include="Scripts\Email\Sentbox.js" />
     <Content Include="Scripts\Home\Index.js" />
     <Content Include="Scripts\Home\Login.js" />
     <Content Include="Scripts\Home\Global.js" />
-    <Content Include="Scripts\PDFView\PDFView.js" />
     <Content Include="Scripts\System\Index.js" />
     <Content Include="Scripts\System\Province.js" />
     <Content Include="Scripts\System\City.js" />
     <Content Include="Scripts\System\Region.js" />
     <Content Include="Scripts\System\Department.js" />
     <Content Include="Scripts\System\Role.js" />
+    <Content Include="Scripts\System\Subject.js" />
     <Content Include="Scripts\System\SysUser.js" />
     <Content Include="Scripts\System\Rights.js" />
-    <Content Include="Scripts\Task\MyTask.js" />
-    <Content Include="Scripts\Task\NewTask.js" />
-    <Content Include="Scripts\Task\AssignedTask.js" />
-    <Content Include="Scripts\Apply\MyCheck.js" />
-    <Content Include="Scripts\Apply\MyApply.js" />
-    <Content Include="Scripts\Apply\NewApply.js" />
-    <Content Include="Scripts\DocPass\MyDoc.js" />
-    <Content Include="Scripts\DocPass\MyPass.js" />
-    <Content Include="Scripts\DocPass\NewDocPass.js" />
-    <Content Include="Scripts\Custom\CustomList.js" />
-    <Content Include="Scripts\Custom\NewCustom.js" />
-    <Content Include="Scripts\CustomMaintain\CustomBirthDay.js" />
-    <Content Include="Scripts\CustomMaintain\CustomList.js" />
-    <Content Include="Scripts\CustomMaintain\NewCustom.js" />
+    <Content Include="Scripts\System\Class.js" />
+    <Content Include="Scripts\System\Teacher.js" />
     <Content Include="Upload\Avatar\1_avatar.txt" />
     <Content Include="Upload\Avatar\DefaultAvatar.jpg" />
     <Content Include="Views\Account\Index.aspx" />
@@ -911,16 +877,7 @@
     <Content Include="Views\Article\Get.aspx" />
     <Content Include="Views\Article\View.aspx" />
     <Content Include="Views\Category\List.aspx" />
-    <Content Include="Views\Custom\CustomList.aspx" />
-    <Content Include="Views\Custom\NewCustom.aspx" />
-    <Content Include="Views\Custom\CustomBirthday.aspx" />
-    <Content Include="Views\Custom\NewActive.aspx" />
-    <Content Include="Views\Custom\ActiveSummary.aspx" />
-    <Content Include="Views\Custom\ActiveWarnning.aspx" />
     <Content Include="Views\UploadFile\PDFView.aspx" />
-    <Content Include="Views\Email\NewEmail.aspx" />
-    <Content Include="Views\Email\Inbox.aspx" />
-    <Content Include="Views\Email\Sentbox.aspx" />
     <Content Include="Views\FckEditor\Browser.aspx" />
     <Content Include="Views\Forum\Index.aspx" />
     <Content Include="Views\Forum\View.aspx" />
@@ -936,19 +893,10 @@
     <Content Include="Views\Shared\MessageControl.ascx" />
     <Content Include="Views\Shared\SidebarControl.ascx" />
     <Content Include="Views\System\Index.aspx" />
-    <Content Include="Views\Task\MyTask.aspx" />
-    <Content Include="Views\Task\NewTask.aspx" />
-    <Content Include="Views\Task\AssignedTask.aspx" />
     <Content Include="Views\UserInfo\Index.aspx" />
     <Content Include="Views\UserInfo\View.aspx" />
     <Content Include="Views\Category\Index.aspx" />
     <Content Include="Views\Category\View.aspx" />
-    <Content Include="Views\Apply\MyCheck.aspx" />
-    <Content Include="Views\Apply\MyApply.aspx" />
-    <Content Include="Views\Apply\NewApply.aspx" />
-    <Content Include="Views\DocPass\MyDoc.aspx" />
-    <Content Include="Views\DocPass\MyPass.aspx" />
-    <Content Include="Views\DocPass\NewPass.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

@@ -22,11 +22,7 @@ namespace WebSite.Controllers
         public IGlobalSettingManager GlobalSettingManager { get; set; }
         public IRegistrationManager RegistrationManager { get; set; }
         public ISystemModelManager SystemModelManager { get; set; }
-        public IEmailReceiveUserRelationManager EmailReceiveUserRelationManager { get; set; }
-        public ITaskReceiveUserRelationManager TaskReceiveUserRelationManager { get; set; }
         public INoticeManager NoticeManager { get; set; }
-        public IDocReceiveUserRelationManager DocReceiveUserRelationManager { get; set; }
-        public ICheckLogManager CheckLogManager { get; set; }
 
         public ActionResult Index()
         {
@@ -51,11 +47,7 @@ namespace WebSite.Controllers
 
                 UserInfo user = UserInfoManager.GetUserSession();
 
-                ViewData["EmailReceiveUserRelation"] = EmailReceiveUserRelationManager.LoadAll().Where(f => f.ReceiveUser.ID == user.ID).Take(5);
-                ViewData["TaskReceiveUserRelation"] = TaskReceiveUserRelationManager.LoadAll().Where(f => f.ReceiveUser.ID == user.ID).Take(5);
                 ViewData["Notice"] = NoticeManager.LoadAll().Where(f=>f.ReceiveUser.ID == user.ID);
-                ViewData["MyEmailCount"] = ((IEnumerable<EmailReceiveUserRelation>)ViewData["EmailReceiveUserRelation"]).Count();
-                ViewData["MyTaskCount"] = ((IEnumerable<TaskReceiveUserRelation>)ViewData["TaskReceiveUserRelation"]).Count();
                 ViewData["NoticeCount"] = ((IEnumerable<Notice>)ViewData["Notice"]).Count();
 
                 return View();
@@ -136,13 +128,8 @@ namespace WebSite.Controllers
         public ActionResult GetBadgeInfo(UserInfo userInfo)
         {
             UserInfo user = UserInfoManager.GetUserSession();
-            string myEmail = EmailReceiveUserRelationManager.LoadAll().Where(f => f.ReceiveUser.ID == user.ID && !f.IsRead).ToList().Count().ToString();
-            string myTask = TaskReceiveUserRelationManager.LoadAll().Where(f => f.ReceiveUser.ID == user.ID && f.TaskState.StateName !="已完成").ToList().Count().ToString();
-            string myCheck = CheckLogManager.LoadAll().Where(f=>f.UserInfo.ID == user.ID && f.CheckState==0).ToList().Count.ToString();
-            string myPass = DocReceiveUserRelationManager.LoadAll().Where(f => f.ReceiveUser.ID == user.ID && !f.IsRead).ToList().Count().ToString();
-
-            var result = new { myEmail = myEmail, myCheck = myCheck, myTask = myTask, myPass = myPass };
-            return Content(Atom.Common.JsonHelper.GenerateStringByJsonDotNet(result));
+            
+            return Content("");
         }
 
         public ActionResult LogOnByAndPassword(string account, string password, string code)

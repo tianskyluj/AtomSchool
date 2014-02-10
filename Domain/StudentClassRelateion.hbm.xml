@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="StudentClassRelateion" table="T_StudentClassRelateion">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="StudentClassRelateionID" index="PK_StudentClassRelateion"/>
+			<generator class="assigned" />
+		</id>
+
+    <!--学生-->
+    <many-to-one name="Student" column="StudentID" class="Student" not-null="true"
+                  cascade="save-update" foreign-key="FK_StudentClassRelateion_Student"/>
+
+    <!--班级-->
+    <many-to-one name="Classes" column="ClassesID" class="Classes" not-null="true"
+                  cascade="save-update" foreign-key="FK_StudentClassRelateion_Classes"/>
+
+    <!--启用-->
+		<property name="IsEnabled" type="bool">
+			<column name="IsEnabled" not-null="true"/>
+		</property>
+	</class>
+
+</hibernate-mapping>

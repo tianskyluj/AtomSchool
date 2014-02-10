@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Domain"
+                   namespace="Domain">
+
+	<class name="HomeWork" table="T_HomeWork">
+		<cache usage="read-write"/>
+		<id name="ID" type="Guid">
+			<column name="HomeWorkID" index="PK_HomeWork"/>
+			<generator class="assigned" />
+		</id>
+
+    <!--作业提交日期-->
+    <property name="ComitDate" type="DateTime">
+      <column name="ComitDate" not-null="true"/>
+    </property>
+
+    <!--作业班级-->
+    <many-to-one name="Classes" column="ClassesID" class="Classes" not-null="true"
+                  cascade="save-update" foreign-key="FK_HomeWork_Classes"/>
+
+    <!--科目-->
+    <many-to-one name="Subject" column="SubjectID" class="Subject" not-null="true"
+                  cascade="save-update" foreign-key="FK_HomeWork_Subject"/>
+
+    <!--作业内容-->
+    <property name="Content" type="string">
+      <column name="Content" length="500" not-null="true"/>
+    </property>
+
+    <!--布置作业的老师-->
+    <many-to-one name="Teacher" column="TeacherID" class="Teacher" not-null="true"
+                  cascade="save-update" foreign-key="FK_HomeWork_Teacher"/>
+
+    <!--作业添加日期-->
+    <property name="CreateDate" type="DateTime">
+      <column name="CreateDate" not-null="true"/>
+    </property>
+
+  </class>
+
+</hibernate-mapping>

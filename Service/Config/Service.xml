@@ -137,142 +137,6 @@
     </property>
   </object>
 
-  <object id="Manager.Email" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.EmailManager, Service">
-        <property name="CurrentRepository" ref="Repository.Email"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.EmailReceiveUserRelation" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.EmailReceiveUserRelationManager, Service">
-        <property name="CurrentRepository" ref="Repository.EmailReceiveUserRelation"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.Task" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.TaskManager, Service">
-        <property name="CurrentRepository" ref="Repository.Task"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.TaskState" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.TaskStateManager, Service">
-        <property name="CurrentRepository" ref="Repository.TaskState"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.TaskLevel" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.TaskLevelManager, Service">
-        <property name="CurrentRepository" ref="Repository.TaskLevel"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.TaskReceiveUserRelation" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.TaskReceiveUserRelationManager, Service">
-        <property name="CurrentRepository" ref="Repository.TaskReceiveUserRelation"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.ApplyType" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.ApplyTypeManager, Service">
-        <property name="CurrentRepository" ref="Repository.ApplyType"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.Flow" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.FlowManager, Service">
-        <property name="CurrentRepository" ref="Repository.Flow"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.Apply" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.ApplyManager, Service">
-        <property name="CurrentRepository" ref="Repository.Apply"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.CheckLog" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.CheckLogManager, Service">
-        <property name="CurrentRepository" ref="Repository.CheckLog"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.DocPass" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.DocPassManager, Service">
-        <property name="CurrentRepository" ref="Repository.DocPass"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.DocReceiveUserRelation" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.DocReceiveUserRelationManager, Service">
-        <property name="CurrentRepository" ref="Repository.DocReceiveUserRelation"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.Custom" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.CustomManager, Service">
-        <property name="CurrentRepository" ref="Repository.Custom"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.CustomType" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.CustomTypeManager, Service">
-        <property name="CurrentRepository" ref="Repository.CustomType"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.CustomMaintain" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.CustomMaintainManager, Service">
-        <property name="CurrentRepository" ref="Repository.CustomMaintain"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.MaintainType" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.MaintainTypeManager, Service">
-        <property name="CurrentRepository" ref="Repository.MaintainType"/>
-      </object>
-    </property>
-  </object>
-
-  <object id="Manager.MaintainMethod" parent="BaseTransactionManager">
-    <property name="Target">
-      <object type="Service.Implement.MaintainMethodManager, Service">
-        <property name="CurrentRepository" ref="Repository.MaintainMethod"/>
-      </object>
-    </property>
-  </object>
-
   <object id="Manager.Notice" parent="BaseTransactionManager">
     <property name="Target">
       <object type="Service.Implement.NoticeManager, Service">
@@ -304,6 +168,78 @@
       </object>
     </property>
   </object>
+
+  <object id="Manager.GradeType" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.GradeTypeManager, Service">
+        <property name="CurrentRepository" ref="Repository.GradeType"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Grade" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.GradeManager, Service">
+        <property name="CurrentRepository" ref="Repository.Grade"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Subject" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.SubjectManager, Service">
+        <property name="CurrentRepository" ref="Repository.Subject"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Teacher" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.TeacherManager, Service">
+        <property name="CurrentRepository" ref="Repository.Teacher"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.Classes" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.ClassesManager, Service">
+        <property name="CurrentRepository" ref="Repository.Classes"/>
+      </object>
+    </property>
+  </object>
+  
+  <object id="Manager.ClassTeacherRelation" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.ClassTeacherRelationManager, Service">
+        <property name="CurrentRepository" ref="Repository.ClassTeacherRelation"/>
+      </object>
+    </property>
+  </object>
+  
+  <object id="Manager.Student" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.StudentManager, Service">
+        <property name="CurrentRepository" ref="Repository.Student"/>
+      </object>
+    </property>
+  </object>
+
+  <object id="Manager.StudentClassRelateion" parent="BaseTransactionManager">
+    <property name="Target">
+      <object type="Service.Implement.StudentClassRelateionManager, Service">
+        <property name="CurrentRepository" ref="Repository.StudentClassRelateion"/>
+      </object>
+    </property>
+  </object>
+  
+  <object id="Manager.HomeWork" parent="BaseTransactionManager">
+  <property name="Target">
+    <object type="Service.Implement.HomeWorkManager, Service">
+      <property name="CurrentRepository" ref="Repository.HomeWork"/>
+    </object>
+  </property>
+</object>
 
 </objects>
 

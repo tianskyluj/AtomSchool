@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TaskLevel>
-  <Level name="普通" orderIndex="0" />
-  <Level name="紧急" orderIndex="1" />
-  <Level name="非常紧急" orderIndex="2" />
-</TaskLevel>
