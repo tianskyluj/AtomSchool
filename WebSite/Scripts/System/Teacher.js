@@ -314,7 +314,7 @@ $(function () {
                 "userName": $('#teacherUserName_edit').val().trim(),
                 "subjectStr": $('#subjectAttrTeacher').val().trim()
             },
-                function (result) { if (result == "1") { $("#addAndUpdateTeacher").modal("hide"); redirect('/System/Index'); alert("操作成功"); } else { showError("出错了，请稍后再试或者联系系统管理员") } }
+                function (result) { if (result == "1") { $("#addAndUpdateTeacher").modal("hide"); redirect('/System/Index'); alert("操作成功"); } else { showError(result+"出错了，请稍后再试或者联系系统管理员") } }
         );
     });
 });

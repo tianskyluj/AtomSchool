@@ -91,3 +91,28 @@ C:\Users\Administrator\Documents\GitHub\AtomSchool\Dao\bin\Debug\Newtonsoft.Json
 C:\Users\Administrator\Documents\GitHub\AtomSchool\Dao\obj\Debug\Dao.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\AtomSchool\Dao\obj\Debug\Dao.dll
 C:\Users\Administrator\Documents\GitHub\AtomSchool\Dao\obj\Debug\Dao.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Dao.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Dao.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Antlr3.Runtime.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Common.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Domain.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Iesi.Collections.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\LinFu.DynamicProxy.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\NHibernate.ByteCode.LinFu.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\NHibernate.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Remotion.Data.Linq.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Spring.Core.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Spring.Data.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Spring.Data.NHibernate30.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Excel.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\COM.Excel.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\OpenSmtp.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Newtonsoft.Json.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Common.Logging.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Spring.Aop.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Common.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Domain.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\bin\Debug\Newtonsoft.Json.xml
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\obj\Debug\Dao.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Dao\obj\Debug\Dao.pdb

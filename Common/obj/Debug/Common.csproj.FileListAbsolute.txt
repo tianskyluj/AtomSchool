@@ -21,3 +21,13 @@ C:\Users\Administrator\Documents\GitHub\AtomMVC\Common\obj\Debug\Common.pdb
 C:\Users\Administrator\Documents\GitHub\AtomMVC\Common\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Administrator\Documents\GitHub\AtomMVC\Common\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Administrator\Documents\GitHub\AtomMVC\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Common\bin\Debug\Common.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Common\bin\Debug\Common.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Common\bin\Debug\COM.Excel.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Common\bin\Debug\Excel.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Common\bin\Debug\Newtonsoft.Json.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Common\bin\Debug\OpenSmtp.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Common\bin\Debug\Newtonsoft.Json.xml
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Common\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Common\obj\Debug\Common.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Common\obj\Debug\Common.pdb

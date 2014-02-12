@@ -107,6 +107,9 @@
   <object type="WebSite.Controllers.TeacherController, WebSite" singleton="false" >
     <property name="TeacherManager" ref="Manager.Teacher"/>
     <property name="SubjectManager" ref="Manager.Subject"/>
+	<property name="UserInfoManager" ref="Manager.UserInfo"/>
+	  <property name="RoleManager" ref="Manager.Role"/>
+	  <property name="RoleUserManager" ref="Manager.RoleUser"/>
   </object>
 
 	<object type="MvcFckEditor.Controllers.FckEditorController, MvcFckEditor" singleton="false" />

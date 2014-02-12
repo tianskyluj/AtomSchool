@@ -38,6 +38,7 @@ namespace WebSite
             this.LoadGradeType();
             this.LoadGrade();
             this.LoadSubject();
+            this.LoadRole();
         }
 
         /// <summary>
@@ -222,6 +223,33 @@ namespace WebSite
                     Domain.Subject entity = new Domain.Subject();
                     entity.ID = Guid.NewGuid();
                     entity.Name = xmlDS.Tables[0].Rows[i]["name"].ToStr();
+                    manger.Save(entity);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 按config文件夹中的Role.xml配置文件加载 角色
+        /// </summary>
+        private void LoadRole()
+        {
+            string xmlPath = "~/Config/Role.xml";
+            IApplicationContext cxt = ContextRegistry.GetContext();
+            IRoleManager manger = (IRoleManager)cxt.GetObject("Manager.Role");
+            IList<Domain.Role> RoleList = manger.LoadAll();
+            if (RoleList.Count == 0)
+            {
+                //manger.LoadSystemModelWithXML();
+                // 把xml文件转换成dataSet
+                Atom.Common.XML.XMLProcess xmlProcess = new Atom.Common.XML.XMLProcess();
+                DataSet xmlDS = xmlProcess.GetDataSetByXml(xmlPath);
+                // 生成目录
+                for (int i = 0; i < xmlDS.Tables[0].Rows.Count; i++)
+                {
+                    Domain.Role entity = new Domain.Role();
+                    entity.ID = Guid.NewGuid();
+                    entity.RoleName = xmlDS.Tables[0].Rows[i]["name"].ToStr();
+                    entity.IsEnabled = true;
                     manger.Save(entity);
                 }
             }

@@ -305,6 +305,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Config\Subject.xml" />
+    <Content Include="Config\Role.xml" />
     <Content Include="Content\Logon.css" />
     <Content Include="easyui\easyloader.js" />
     <Content Include="easyui\jquery.easyui.min.js" />

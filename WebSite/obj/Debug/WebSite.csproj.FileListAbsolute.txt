@@ -161,3 +161,46 @@ C:\Users\Administrator\Documents\GitHub\AtomSchool\WebSite\obj\Debug\WebSite.Res
 C:\Users\Administrator\Documents\GitHub\AtomSchool\WebSite\obj\Debug\WebSite.csproj.GenerateResource.Cache
 C:\Users\Administrator\Documents\GitHub\AtomSchool\WebSite\obj\Debug\WebSite.dll
 C:\Users\Administrator\Documents\GitHub\AtomSchool\WebSite\obj\Debug\WebSite.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\WebSite.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\WebSite.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Common.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Domain.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\LinFu.DynamicProxy.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\log4net.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\MvcFckEditor.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\NHibernate.ByteCode.LinFu.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Service.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Spring.Aop.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Spring.Core.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Spring.Data.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Spring.Data.NHibernate30.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Spring.Services.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Spring.Template.Velocity.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Spring.Web.Mvc.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\System.Web.Abstractions.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\System.Web.Mvc.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\System.Web.Routing.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Excel.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\COM.Excel.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\OpenSmtp.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Newtonsoft.Json.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Dao.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\NHibernate.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Common.Logging.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Iesi.Collections.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Antlr3.Runtime.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Remotion.Data.Linq.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Common.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Domain.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Service.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\System.Web.Mvc.xml
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Newtonsoft.Json.xml
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\Dao.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\obj\Debug\WebSite.Resource.en-US.resources
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\obj\Debug\WebSite.Resource.zh-CN.resources
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\obj\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\obj\Debug\WebSite.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\WebSite\obj\Debug\WebSite.pdb

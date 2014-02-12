@@ -91,3 +91,28 @@ C:\Users\Administrator\Documents\GitHub\AtomSchool\Service\bin\Debug\Newtonsoft.
 C:\Users\Administrator\Documents\GitHub\AtomSchool\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\AtomSchool\Service\obj\Debug\Service.dll
 C:\Users\Administrator\Documents\GitHub\AtomSchool\Service\obj\Debug\Service.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Service.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Service.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Common.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Dao.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Domain.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Excel.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\COM.Excel.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\OpenSmtp.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Newtonsoft.Json.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Spring.Data.NHibernate30.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\NHibernate.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Spring.Data.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Spring.Core.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Spring.Aop.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Common.Logging.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Iesi.Collections.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Antlr3.Runtime.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Remotion.Data.Linq.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Common.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Dao.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Domain.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\bin\Debug\Newtonsoft.Json.xml
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\obj\Debug\Service.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\AtomSchool\Service\obj\Debug\Service.pdb
